@@ -1,0 +1,1813 @@
+<html lang="ar" dir="rtl"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="بكالوريا 2027">
+    <meta name="application-name" content="بكالوريا 2027">
+    <meta name="theme-color" content="#0b132b">
+    <title>بكالوريا 2027 | طريقي إلى كلية الطب البشري</title>
+
+    <!-- PWA Dynamic Web Manifest Link Injection -->
+    <link id="manifestLink" rel="manifest" href="manifest.json">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&amp;family=Cairo:wght@400;600;700;900&amp;family=Tajawal:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        medical: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            400: '#2dd4bf',
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            700: '#0f766e',
+                            800: '#115e59',
+                            900: '#134e4a',
+                        },
+                        syrianBlue: {
+                            900: '#0b132b',
+                            800: '#1c2541',
+                            700: '#3a506b',
+                            600: '#486581',
+                        },
+                        gold: {
+                            300: '#fde047',
+                            400: '#fbbf24',
+                            500: '#d4af37',
+                            600: '#b48811',
+                        }
+                    },
+                    fontFamily: {
+                        tajawal: ['Tajawal', 'sans-serif'],
+                        amiri: ['Amiri', 'serif'],
+                        cairo: ['Cairo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #0b132b;
+            background-image: 
+                radial-gradient(circle at 20% 20%, rgba(20, 184, 166, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.12) 0%, transparent 40%),
+                radial-gradient(circle at 50% 50%, rgba(28, 37, 65, 0.8) 0%, transparent 70%);
+            background-attachment: fixed;
+            color: #f8fafc;
+            user-select: none;
+            -webkit-user-select: none;
+            overflow-x: hidden;
+        }
+
+        .font-quran { font-family: 'Amiri', serif; }
+        .font-cairo { font-family: 'Cairo', sans-serif; }
+
+        .glass-card {
+            background: rgba(28, 37, 65, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+        }
+
+        .glass-card-medical {
+            background: linear-gradient(135deg, rgba(15, 118, 110, 0.25) 0%, rgba(11, 19, 43, 0.85) 100%);
+            border: 1px solid rgba(20, 184, 166, 0.35);
+        }
+
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #fff3c4 0%, #d4af37 50%, #aa7c11 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .medical-gradient-text {
+            background: linear-gradient(135deg, #ccfbf1 0%, #14b8a6 50%, #0d9488 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .pulse-glow {
+            animation: pulseGlow 3s infinite ease-in-out;
+        }
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 15px rgba(20, 184, 166, 0.2); }
+            50% { box-shadow: 0 0 30px rgba(20, 184, 166, 0.5); }
+        }
+
+        .quote-fade {
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
+
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: rgba(11, 19, 43, 0.6); }
+        ::-webkit-scrollbar-thumb { background: rgba(212, 175, 55, 0.4); border-radius: 9999px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(212, 175, 55, 0.8); }
+
+        input[type=range] { accent-color: #14b8a6; }
+
+        /* Light theme */
+        body.light-theme {
+            background-color: #eef4f7;
+            background-image:
+                radial-gradient(circle at 20% 20%, rgba(20, 184, 166, 0.12) 0%, transparent 40%),
+                radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.10) 0%, transparent 40%),
+                radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, transparent 70%);
+            color: #172033;
+        }
+        body.light-theme .glass-card {
+            background: rgba(255,255,255,.78);
+            border-color: rgba(180,136,17,.22);
+            box-shadow: 0 10px 30px -5px rgba(15,23,42,.12), inset 0 1px 1px rgba(255,255,255,.8);
+        }
+        body.light-theme .glass-card-medical {
+            background: linear-gradient(135deg, rgba(20,184,166,.10), rgba(255,255,255,.90));
+            border-color: rgba(13,148,136,.25);
+        }
+        body.light-theme .text-white { color:#172033 !important; }
+        body.light-theme .text-gray-100 { color:#263248 !important; }
+        body.light-theme .text-gray-200 { color:#334155 !important; }
+        body.light-theme .text-gray-300 { color:#475569 !important; }
+        body.light-theme .text-gray-400 { color:#64748b !important; }
+        body.light-theme .text-gray-500 { color:#64748b !important; }
+        body.light-theme .bg-syrianBlue-900 { background-color:#e7eef3 !important; }
+        body.light-theme .bg-syrianBlue-800 { background-color:#dbe6ed !important; }
+        body.light-theme .bg-syrianBlue-700 { background-color:#cbd8e1 !important; }
+        body.light-theme .bg-syrianBlue-600 { background-color:#b9cad5 !important; }
+        body.light-theme .bg-syrianBlue-900\/80,
+        body.light-theme .bg-syrianBlue-900\/60,
+        body.light-theme .bg-syrianBlue-900\/90,
+        body.light-theme .bg-syrianBlue-800\/40,
+        body.light-theme .bg-syrianBlue-800\/50 { background-color:rgba(231,238,243,.82) !important; }
+        body.light-theme .border-gold-500\/20,
+        body.light-theme .border-gold-500\/30,
+        body.light-theme .border-gold-500\/40 { border-color:rgba(180,136,17,.25) !important; }
+        body.light-theme .border-medical-500\/20,
+        body.light-theme .border-medical-500\/30 { border-color:rgba(13,148,136,.22) !important; }
+        body.light-theme .hover\:bg-syrianBlue-700:hover { background-color:#cbd8e1 !important; }
+        body.light-theme ::-webkit-scrollbar-track { background:rgba(203,216,225,.6); }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0px}.-bottom-10{bottom:-2.5rem}.-left-10{left:-2.5rem}.bottom-6{bottom:1.5rem}.left-4{left:1rem}.right-6{right:1.5rem}.top-4{top:1rem}.bottom-2{bottom:0.5rem}.right-2{right:0.5rem}.z-10{z-index:10}.z-50{z-index:50}.col-span-2{grid-column:span 2 / span 2}.col-span-full{grid-column:1 / -1}.mx-auto{margin-left:auto;margin-right:auto}.my-2{margin-top:0.5rem;margin-bottom:0.5rem}.my-1{margin-top:0.25rem;margin-bottom:0.25rem}.mb-1{margin-bottom:0.25rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.ml-1{margin-left:0.25rem}.mt-0\.5{margin-top:0.125rem}.mt-1{margin-top:0.25rem}.mt-1\.5{margin-top:0.375rem}.mt-2{margin-top:0.5rem}.mt-3{margin-top:0.75rem}.mt-4{margin-top:1rem}.mt-8{margin-top:2rem}.mb-0\.5{margin-bottom:0.125rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.aspect-video{aspect-ratio:16 / 9}.h-1\.5{height:0.375rem}.h-10{height:2.5rem}.h-12{height:3rem}.h-48{height:12rem}.h-72{height:18rem}.h-8{height:2rem}.h-full{height:100%}.h-1{height:0.25rem}.h-16{height:4rem}.h-6{height:1.5rem}.h-40{height:10rem}.max-h-\[260px\]{max-height:260px}.max-h-\[90vh\]{max-height:90vh}.min-h-screen{min-height:100vh}.w-1\.5{width:0.375rem}.w-10{width:2.5rem}.w-12{width:3rem}.w-8{width:2rem}.w-full{width:100%}.w-16{width:4rem}.w-20{width:5rem}.w-6{width:1.5rem}.min-w-\[280px\]{min-width:280px}.min-w-\[500px\]{min-width:500px}.max-w-4xl{max-width:56rem}.max-w-7xl{max-width:80rem}.max-w-xl{max-width:36rem}.max-w-lg{max-width:32rem}.max-w-md{max-width:28rem}.max-w-xs{max-width:20rem}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}.flex-grow{flex-grow:1}.border-collapse{border-collapse:collapse}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite}.cursor-pointer{cursor:pointer}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-end{align-items:flex-end}.items-center{align-items:center}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-1\.5{gap:0.375rem}.gap-2{gap:0.5rem}.gap-2\.5{gap:0.625rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-5{gap:1.25rem}.gap-6{gap:1.5rem}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.space-y-2\.5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.625rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.625rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.divide-y > :not([hidden]) ~ :not([hidden]){--tw-divide-y-reverse:0;border-top-width:calc(1px * calc(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(1px * var(--tw-divide-y-reverse))}.divide-gold-500\/10 > :not([hidden]) ~ :not([hidden]){border-color:rgb(212 175 55 / 0.1)}.self-start{align-self:flex-start}.overflow-hidden{overflow:hidden}.overflow-visible{overflow:visible}.overflow-x-auto{overflow-x:auto}.overflow-y-auto{overflow-y:auto}.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.rounded{border-radius:0.25rem}.rounded-tr-none{border-top-right-radius:0px}.rounded-tl-none{border-top-left-radius:0px}.border{border-width:1px}.border-2{border-width:2px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-r{border-right-width:1px}.border-emerald-500\/30{border-color:rgb(16 185 129 / 0.3)}.border-emerald-500\/40{border-color:rgb(16 185 129 / 0.4)}.border-gold-400\/40{border-color:rgb(251 191 36 / 0.4)}.border-gold-500\/10{border-color:rgb(212 175 55 / 0.1)}.border-gold-500\/20{border-color:rgb(212 175 55 / 0.2)}.border-gold-500\/30{border-color:rgb(212 175 55 / 0.3)}.border-gold-500\/40{border-color:rgb(212 175 55 / 0.4)}.border-medical-400\/40{border-color:rgb(45 212 191 / 0.4)}.border-medical-500\/10{border-color:rgb(20 184 166 / 0.1)}.border-medical-500\/20{border-color:rgb(20 184 166 / 0.2)}.border-medical-500\/30{border-color:rgb(20 184 166 / 0.3)}.border-medical-500\/40{border-color:rgb(20 184 166 / 0.4)}.border-medical-500\/50{border-color:rgb(20 184 166 / 0.5)}.border-gold-500\/50{border-color:rgb(212 175 55 / 0.5)}.border-medical-400\/30{border-color:rgb(45 212 191 / 0.3)}.border-gold-400{--tw-border-opacity:1;border-color:rgb(251 191 36 / var(--tw-border-opacity, 1))}.bg-emerald-400{--tw-bg-opacity:1;background-color:rgb(52 211 153 / var(--tw-bg-opacity, 1))}.bg-emerald-500\/20{background-color:rgb(16 185 129 / 0.2)}.bg-emerald-950\/20{background-color:rgb(2 44 34 / 0.2)}.bg-gold-500\/20{background-color:rgb(212 175 55 / 0.2)}.bg-medical-500\/20{background-color:rgb(20 184 166 / 0.2)}.bg-medical-600{--tw-bg-opacity:1;background-color:rgb(13 148 136 / var(--tw-bg-opacity, 1))}.bg-medical-600\/30{background-color:rgb(13 148 136 / 0.3)}.bg-syrianBlue-700{--tw-bg-opacity:1;background-color:rgb(58 80 107 / var(--tw-bg-opacity, 1))}.bg-syrianBlue-900{--tw-bg-opacity:1;background-color:rgb(11 19 43 / var(--tw-bg-opacity, 1))}.bg-syrianBlue-900\/60{background-color:rgb(11 19 43 / 0.6)}.bg-syrianBlue-900\/80{background-color:rgb(11 19 43 / 0.8)}.bg-syrianBlue-900\/90{background-color:rgb(11 19 43 / 0.9)}.bg-black\/80{background-color:rgb(0 0 0 / 0.8)}.bg-black\/90{background-color:rgb(0 0 0 / 0.9)}.bg-medical-900\/80{background-color:rgb(19 78 74 / 0.8)}.bg-syrianBlue-800{--tw-bg-opacity:1;background-color:rgb(28 37 65 / var(--tw-bg-opacity, 1))}.bg-syrianBlue-800\/90{background-color:rgb(28 37 65 / 0.9)}.bg-syrianBlue-900\/40{background-color:rgb(11 19 43 / 0.4)}.bg-medical-600\/80{background-color:rgb(13 148 136 / 0.8)}.bg-gradient-to-br{background-image:linear-gradient(to bottom right, var(--tw-gradient-stops))}.bg-gradient-to-r{background-image:linear-gradient(to right, var(--tw-gradient-stops))}.from-gold-500{--tw-gradient-from:#d4af37 var(--tw-gradient-from-position);--tw-gradient-to:rgb(212 175 55 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-gold-500\/20{--tw-gradient-from:rgb(212 175 55 / 0.2) var(--tw-gradient-from-position);--tw-gradient-to:rgb(212 175 55 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-medical-500{--tw-gradient-from:#14b8a6 var(--tw-gradient-from-position);--tw-gradient-to:rgb(20 184 166 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-medical-600{--tw-gradient-from:#0d9488 var(--tw-gradient-from-position);--tw-gradient-to:rgb(13 148 136 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-syrianBlue-900\/90{--tw-gradient-from:rgb(11 19 43 / 0.9) var(--tw-gradient-from-position);--tw-gradient-to:rgb(11 19 43 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-medical-900\/40{--tw-gradient-to:rgb(19 78 74 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), rgb(19 78 74 / 0.4) var(--tw-gradient-via-position), var(--tw-gradient-to)}.via-syrianBlue-800{--tw-gradient-to:rgb(28 37 65 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #1c2541 var(--tw-gradient-via-position), var(--tw-gradient-to)}.to-gold-600{--tw-gradient-to:#b48811 var(--tw-gradient-to-position)}.to-medical-500{--tw-gradient-to:#14b8a6 var(--tw-gradient-to-position)}.to-medical-500\/20{--tw-gradient-to:rgb(20 184 166 / 0.2) var(--tw-gradient-to-position)}.to-medical-600{--tw-gradient-to:#0d9488 var(--tw-gradient-to-position)}.to-syrianBlue-900{--tw-gradient-to:#0b132b var(--tw-gradient-to-position)}.to-syrianBlue-900\/90{--tw-gradient-to:rgb(11 19 43 / 0.9) var(--tw-gradient-to-position)}.object-cover{object-fit:cover}.p-2\.5{padding:0.625rem}.p-3{padding:0.75rem}.p-3\.5{padding:0.875rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.p-1{padding:0.25rem}.p-2{padding:0.5rem}.p-1\.5{padding:0.375rem}.px-1{padding-left:0.25rem;padding-right:0.25rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-2\.5{padding-left:0.625rem;padding-right:0.625rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-3\.5{padding-left:0.875rem;padding-right:0.875rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.pb-2{padding-bottom:0.5rem}.pb-3{padding-bottom:0.75rem}.pb-4{padding-bottom:1rem}.pt-2{padding-top:0.5rem}.pt-3{padding-top:0.75rem}.pt-6{padding-top:1.5rem}.pb-1{padding-bottom:0.25rem}.pr-1{padding-right:0.25rem}.pt-4{padding-top:1rem}.pt-0{padding-top:0px}.text-left{text-align:left}.text-center{text-align:center}.font-cairo{font-family:Cairo, sans-serif}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.font-tajawal{font-family:Tajawal, sans-serif}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-\[200px\]{font-size:200px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-black{font-weight:900}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-semibold{font-weight:600}.leading-relaxed{line-height:1.625}.tracking-wider{letter-spacing:0.05em}.text-emerald-300{--tw-text-opacity:1;color:rgb(110 231 183 / var(--tw-text-opacity, 1))}.text-emerald-400{--tw-text-opacity:1;color:rgb(52 211 153 / var(--tw-text-opacity, 1))}.text-gold-300{--tw-text-opacity:1;color:rgb(253 224 71 / var(--tw-text-opacity, 1))}.text-gold-400{--tw-text-opacity:1;color:rgb(251 191 36 / var(--tw-text-opacity, 1))}.text-gray-100{--tw-text-opacity:1;color:rgb(243 244 246 / var(--tw-text-opacity, 1))}.text-gray-200{--tw-text-opacity:1;color:rgb(229 231 235 / var(--tw-text-opacity, 1))}.text-gray-300{--tw-text-opacity:1;color:rgb(209 213 219 / var(--tw-text-opacity, 1))}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.text-medical-100{--tw-text-opacity:1;color:rgb(204 251 241 / var(--tw-text-opacity, 1))}.text-medical-400{--tw-text-opacity:1;color:rgb(45 212 191 / var(--tw-text-opacity, 1))}.text-syrianBlue-900{--tw-text-opacity:1;color:rgb(11 19 43 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-gold-300\/80{color:rgb(253 224 71 / 0.8)}.opacity-10{opacity:0.1}.opacity-50{opacity:0.5}.shadow{--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-inner{--tw-shadow:inset 0 2px 4px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:inset 0 2px 4px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-medical-500\/20{--tw-shadow-color:rgb(20 184 166 / 0.2);--tw-shadow:var(--tw-shadow-colored)}.shadow-gold-500\/10{--tw-shadow-color:rgb(212 175 55 / 0.1);--tw-shadow:var(--tw-shadow-colored)}.brightness-75{--tw-brightness:brightness(.75);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.hover\:bg-syrianBlue-600:hover{--tw-bg-opacity:1;background-color:rgb(72 101 129 / var(--tw-bg-opacity, 1))}.hover\:bg-syrianBlue-700:hover{--tw-bg-opacity:1;background-color:rgb(58 80 107 / var(--tw-bg-opacity, 1))}.hover\:bg-syrianBlue-800:hover{--tw-bg-opacity:1;background-color:rgb(28 37 65 / var(--tw-bg-opacity, 1))}.hover\:bg-medical-500:hover{--tw-bg-opacity:1;background-color:rgb(20 184 166 / var(--tw-bg-opacity, 1))}.hover\:bg-syrianBlue-800\/40:hover{background-color:rgb(28 37 65 / 0.4)}.hover\:from-gold-400:hover{--tw-gradient-from:#fbbf24 var(--tw-gradient-from-position);--tw-gradient-to:rgb(251 191 36 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.hover\:from-medical-400:hover{--tw-gradient-from:#2dd4bf var(--tw-gradient-from-position);--tw-gradient-to:rgb(45 212 191 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.hover\:from-medical-500:hover{--tw-gradient-from:#14b8a6 var(--tw-gradient-from-position);--tw-gradient-to:rgb(20 184 166 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.hover\:to-gold-500:hover{--tw-gradient-to:#d4af37 var(--tw-gradient-to-position)}.hover\:to-medical-400:hover{--tw-gradient-to:#2dd4bf var(--tw-gradient-to-position)}.hover\:to-medical-500:hover{--tw-gradient-to:#14b8a6 var(--tw-gradient-to-position)}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:text-gold-300:hover{--tw-text-opacity:1;color:rgb(253 224 71 / var(--tw-text-opacity, 1))}.hover\:text-rose-400:hover{--tw-text-opacity:1;color:rgb(251 113 133 / var(--tw-text-opacity, 1))}.focus\:border-gold-400:focus{--tw-border-opacity:1;border-color:rgb(251 191 36 / var(--tw-border-opacity, 1))}.focus\:border-medical-400:focus{--tw-border-opacity:1;border-color:rgb(45 212 191 / var(--tw-border-opacity, 1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}@media (min-width: 640px){.sm\:col-span-1{grid-column:span 1 / span 1}.sm\:inline{display:inline}.sm\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.sm\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.sm\:grid-cols-5{grid-template-columns:repeat(5, minmax(0, 1fr))}.sm\:flex-row{flex-direction:row}.sm\:gap-4{gap:1rem}.sm\:p-6{padding:1.5rem}.sm\:p-8{padding:2rem}.sm\:text-2xl{font-size:1.5rem;line-height:2rem}.sm\:text-3xl{font-size:1.875rem;line-height:2.25rem}.sm\:text-5xl{font-size:3rem;line-height:1}.sm\:text-6xl{font-size:3.75rem;line-height:1}.sm\:text-base{font-size:1rem;line-height:1.5rem}.sm\:text-sm{font-size:0.875rem;line-height:1.25rem}.sm\:text-xl{font-size:1.25rem;line-height:1.75rem}}@media (min-width: 768px){.md\:col-span-2{grid-column:span 2 / span 2}.md\:col-span-4{grid-column:span 4 / span 4}.md\:col-span-8{grid-column:span 8 / span 8}.md\:w-auto{width:auto}.md\:grid-cols-12{grid-template-columns:repeat(12, minmax(0, 1fr))}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.md\:flex-row{flex-direction:row}.md\:justify-start{justify-content:flex-start}.md\:text-right{text-align:right}}@media (min-width: 1024px){.lg\:col-span-6{grid-column:span 6 / span 6}.lg\:col-span-5{grid-column:span 5 / span 5}.lg\:col-span-7{grid-column:span 7 / span 7}.lg\:grid-cols-12{grid-template-columns:repeat(12, minmax(0, 1fr))}.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.lg\:p-8{padding:2rem}}</style></head>
+<body class="min-h-screen flex flex-col justify-between p-3 sm:p-6 lg:p-8">
+
+    <header class="max-w-7xl mx-auto w-full flex flex-wrap items-center justify-between gap-4 mb-6">
+        <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-medical-600 to-syrianBlue-900 border border-medical-500/50 flex items-center justify-center shadow-lg shadow-medical-500/20 pulse-glow">
+                <i class="fa-solid fa-user-doctor text-2xl text-medical-100"></i>
+            </div>
+            <div>
+                <div class="flex items-center gap-2">
+                    <h1 class="text-xl sm:text-2xl font-bold font-cairo text-white">
+                        بكالوريا سوريا 2027
+                    </h1>
+                    <span id="appStatusBadge" class="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 font-bold flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                        <span>تطبيق متصل</span>
+                    </span>
+                </div>
+                <p class="text-xs text-medical-300 font-bold flex items-center gap-1 mt-0.5">
+                    🎓 طريقي إلى كلية الطب البشري
+                </p>
+                <div class="mt-1.5 inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-gradient-to-r from-gold-500/20 via-syrianBlue-800 to-medical-500/20 border border-gold-500/40 text-gold-300 text-xs font-bold shadow-sm">
+                    <i class="fa-solid fa-stethoscope text-medical-400"></i>
+                    <span>طبيب المستقبل عمرو نعمة</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex items-center gap-2 flex-wrap">
+<!-- PWA INSTALL APP BUTTON -->
+            <button id="pwaInstallBtn" class="hidden px-3.5 py-2 rounded-xl bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-syrianBlue-900 font-extrabold text-xs flex items-center gap-2 shadow-lg transition cursor-pointer">
+                <i class="fa-solid fa-download text-sm"></i>
+                <span>تثبيت كـ App 📲</span>
+            </button>
+
+            <button id="notifyBtn" class="px-3 py-2 rounded-xl glass-card hover:bg-syrianBlue-700 text-xs text-gray-200 flex items-center gap-2 border border-gold-500/30 transition cursor-pointer">
+                <i class="fa-solid fa-bell text-gold-400" id="notifyIcon"></i>
+                <span id="notifyText">تفعيل الإشعارات الدائمة 📌</span>
+            </button>
+
+            <button id="fullscreenBtn" class="px-3 py-2 rounded-xl glass-card hover:bg-syrianBlue-700 text-xs text-gray-200 flex items-center gap-2 border border-medical-500/30 transition cursor-pointer" title="عرض ملء الشاشة">
+                <i class="fa-solid fa-expand text-medical-400"></i>
+                <span class="hidden sm:inline">ملء الشاشة</span>
+            </button>
+            <button id="themeBtn" class="px-3 py-2 rounded-xl glass-card hover:bg-syrianBlue-700 text-xs text-gray-200 flex items-center gap-2 border border-gold-500/30 transition cursor-pointer" title="تبديل المظهر">
+                <i class="fa-solid fa-moon text-gold-400" id="themeIcon"></i>
+                <span class="hidden sm:inline" id="themeText">داكن</span>
+            </button>
+            <button id="settingsBtn" class="px-3 py-2 rounded-xl glass-card hover:bg-syrianBlue-700 text-xs text-gray-200 flex items-center gap-2 border border-medical-500/30 transition cursor-pointer" title="الإعدادات">
+                <i class="fa-solid fa-gear text-medical-400"></i>
+                <span class="hidden sm:inline">الإعدادات</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="max-w-7xl mx-auto w-full flex-grow space-y-6">
+
+        <!-- COUNTDOWN SECTION (Fixed "دقائق") -->
+        <section class="glass-card-medical rounded-3xl p-6 sm:p-8 relative overflow-hidden border border-medical-500/40 shadow-2xl">
+            <div class="absolute -left-10 -bottom-10 opacity-10 text-medical-400 pointer-events-none">
+                <i class="fa-solid fa-stethoscope text-[200px]"></i>
+            </div>
+
+            <div class="text-center mb-6">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-medical-500/20 text-medical-300 text-xs font-bold border border-medical-500/30 mb-2">
+                    ⏱️ المتبقي على حلم الطب والتفوق
+                </span>
+                <h2 class="text-sm sm:text-base text-gray-300">العد التنازلي الحقيقي للامتحانات العامة (سوريا 6/6/2027)</h2>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-5 gap-3 sm:gap-4 max-w-4xl mx-auto text-center" id="countdownGrid">
+                <div class="glass-card rounded-2xl p-4 border border-gold-500/30">
+                    <span id="timerMonths" class="block text-3xl sm:text-5xl font-black font-cairo gold-gradient-text">08</span>
+                    <span class="text-xs text-gray-300 font-semibold mt-1 block">أشهر</span>
+                </div>
+
+                <div class="glass-card rounded-2xl p-4 border border-medical-500/30">
+                    <span id="timerDays" class="block text-3xl sm:text-5xl font-black font-cairo text-medical-100">12</span>
+                    <span class="text-xs text-gray-300 font-semibold mt-1 block">أيـام</span>
+                </div>
+
+                <div class="glass-card rounded-2xl p-4 border border-medical-500/30">
+                    <span id="timerHours" class="block text-3xl sm:text-5xl font-black font-cairo text-medical-300">13</span>
+                    <span class="text-xs text-gray-300 font-semibold mt-1 block">سـاعـات</span>
+                </div>
+
+                <div class="glass-card rounded-2xl p-4 border border-gold-500/30">
+                    <span id="timerMinutes" class="block text-3xl sm:text-5xl font-black font-cairo gold-gradient-text">18</span>
+                    <span class="text-xs text-gray-300 font-semibold mt-1 block">دقائق</span>
+                </div>
+
+                <div class="col-span-2 sm:col-span-1 glass-card rounded-2xl p-4 border border-emerald-500/30 bg-emerald-950/20">
+                    <span id="timerSeconds" class="block text-3xl sm:text-5xl font-black font-cairo text-emerald-400">46</span>
+                    <span class="text-xs text-emerald-300 font-semibold mt-1 block">ثـوانـي</span>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- 2. REASSURANCE & MOTIVATION DOSE BANNER -->
+        <section class="glass-card rounded-2xl p-5 border border-gold-500/40 relative">
+            <div class="flex items-center justify-between mb-3 border-b border-gold-500/20 pb-2">
+                <div class="flex items-center gap-2 text-gold-400 font-bold text-xs sm:text-sm">
+                    <i class="fa-solid fa-quote-right text-base"></i>
+                    <span>جرعة تحفيزية واطمئنان (تتجدد تلقائياً كل دقيقة بدون تكرار)</span>
+                </div>
+                <span id="nextQuoteCountdown" class="text-[10px] text-gray-400 font-mono bg-syrianBlue-900 px-2 py-0.5 rounded-full border border-gold-500/20">60s</span>
+            </div>
+
+            <div id="quoteContainer" class="quote-fade text-center py-2 px-2" style="opacity: 1; transform: translateY(0px);">
+                <p id="quoteText" class="text-base sm:text-xl font-quran text-gold-100 leading-relaxed font-semibold">"وَقُل رَّبِّ زِدْنِي عِلْمًا"</p>
+                <span id="quoteAuthor" class="text-xs text-medical-300 block mt-2 font-tajawal">[سورة طه: 114]</span>
+            </div>
+        </section>
+
+        <!-- STUDY TIMER & DAILY TOTAL -->
+        <section class="glass-card-medical rounded-2xl p-6 border border-medical-500/40 shadow-xl relative overflow-hidden">
+            <div class="flex flex-wrap items-center justify-between gap-4 border-b border-medical-500/20 pb-4 mb-4">
+                <div>
+                    <h3 class="text-lg font-bold text-white flex items-center gap-2 font-cairo">
+                        <i class="fa-solid fa-stopwatch text-gold-400 text-xl"></i>
+                        المؤقت الدراسي اليومي • طبيب المستقبل عمرو نعمة
+                    </h3>
+                    <p class="text-xs text-gray-300 mt-1">احسب ساعات دراستك اليومية بدقة مع دعم الشاشة العائمة والتذكير اليومي</p>
+                </div>
+
+                <div class="flex items-center gap-2">
+                    <button id="floatTimerBtn" class="px-3.5 py-2 rounded-xl bg-syrianBlue-900/90 hover:bg-syrianBlue-800 text-gold-300 text-xs font-bold border border-gold-500/30 flex items-center gap-2 transition shadow cursor-pointer">
+                        <i class="fa-solid fa-window-restore text-medical-400"></i>
+                        <span>عرض شاشة عائمة (PIP)</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+                <div class="md:col-span-2 text-center md:text-right bg-syrianBlue-900/60 p-5 rounded-2xl border border-medical-500/20">
+                    <span class="text-xs text-medical-300 font-semibold block mb-1">جلسة الدراسة الحالية:</span>
+                    <div id="studyTimerDisplay" class="text-4xl sm:text-6xl font-mono font-black gold-gradient-text tracking-wider my-2">00:01:10</div>
+
+                    <div class="flex flex-wrap items-center justify-center md:justify-start gap-3 mt-4">
+                        <button id="toggleTimerBtn" class="px-6 py-2.5 rounded-xl bg-gradient-to-r from-medical-500 to-medical-600 hover:from-medical-400 hover:to-medical-500 text-syrianBlue-900 font-extrabold text-xs sm:text-sm flex items-center gap-2 shadow-lg transition cursor-pointer">
+                            <i class="fa-solid fa-pause" id="timerPlayIcon"></i>
+                            <span id="timerPlayText">إيقاف مؤقت</span>
+                        </button>
+
+                        <button id="resetTimerBtn" class="px-4 py-2.5 rounded-xl bg-syrianBlue-700 hover:bg-syrianBlue-600 text-gray-200 text-xs font-bold border border-gold-500/20 flex items-center gap-1.5 transition cursor-pointer">
+                            <i class="fa-solid fa-rotate-left text-gold-400"></i>
+                            <span>تصفير الوقت</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-syrianBlue-900/80 p-5 rounded-2xl border border-gold-500/30 text-center flex flex-col justify-between h-full">
+                    <div>
+                        <span class="text-xs text-gold-400 font-bold block mb-1">إجمالي ما درسته اليوم 📊</span>
+                        <div id="todayTotalDisplay" class="text-2xl sm:text-3xl font-bold font-cairo text-white my-2">0 ساعة و 1 دقيقة</div>
+                    </div>
+                    <div class="mt-3 pt-3 border-t border-gold-500/20 text-[11px] text-gray-400">
+                        <i class="fa-solid fa-shield-check text-medical-400 ml-1"></i>
+                        يتم حفظ الإجمالي تلقائياً على جهازك!
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QURAN PLAYER & AMBIENT SOUNDS -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            <!-- CARD 1: QURAN FOCUS PLAYER -->
+            <div class="glass-card rounded-2xl p-5 border border-gold-500/30 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-base font-bold text-gold-300 flex items-center gap-2">
+                            <i class="fa-solid fa-book-quran text-lg text-gold-400"></i>
+                            القرآن الكريم لزيادة التركيز والبركة
+                        </h3>
+                        <span class="text-[10px] bg-gold-500/20 text-gold-300 border border-gold-500/30 px-2 py-0.5 rounded-full">تشغيل مباشر</span>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div>
+                            <label class="block text-xs text-gray-300 mb-1">اختر القارئ المفضّل:</label>
+                            <select id="reciterSelect" class="w-full bg-syrianBlue-900 border border-gold-500/30 rounded-xl p-2.5 text-xs text-gold-200 focus:outline-none focus:border-gold-400">
+                                <option value="afs">مشاري العفاسي</option>
+                                <option value="maher">ماهر المعيقلي</option>
+                                <option value="basit">عبد الباسط عبد الصمد (المجود)</option>
+                                <option value="yasser">ياسر الدوسري</option>
+                                <option value="sds">عبد الرحمن السديس</option>
+                                <option value="minsh">محمد صديق المنشاوي</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs text-gray-300 mb-1">اختر السورة للتركيز أثناء الدراسة:</label>
+                            <select id="quranSelect" class="w-full bg-syrianBlue-900 border border-gold-500/30 rounded-xl p-2.5 text-xs text-gold-200 focus:outline-none focus:border-gold-400">
+                                <option value="001">سورة الفاتحة - الشافية</option>
+                                <option value="018">سورة الكهف - نور بين الجمعتين</option>
+                                <option value="036">سورة يس - لراحة البال والتركيز</option>
+                                <option value="055">سورة الرحمن - عروس القرآن</option>
+                                <option value="056">سورة الواقعة - للبركة والتيسير</option>
+                                <option value="067">سورة الملك - المنجية</option>
+                                <option value="094">سورة الشرح - ألم نشرح لك صدرك</option>
+                            </select>
+                        </div>
+
+                        <div class="flex items-center justify-between bg-syrianBlue-900/80 p-3 rounded-xl border border-gold-500/20 text-xs">
+                            <span id="currentSurahName" class="font-bold text-gray-200">سورة الفاتحة - مشاري العفاسي</span>
+                            <span id="quranStatus" class="text-gold-400 text-[11px]">متوقف</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-3 mt-4 pt-3 border-t border-gold-500/10">
+                    <button id="playQuranBtn" class="flex-1 py-2.5 rounded-xl bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-syrianBlue-900 font-extrabold text-xs flex items-center justify-center gap-2 shadow-lg transition cursor-pointer">
+                        <i class="fa-solid fa-play" id="quranPlayIcon"></i>
+                        <span id="quranPlayText">تشغيل القرآن</span>
+                    </button>
+                    
+                    <button id="nextQuranBtn" class="p-2.5 rounded-xl bg-syrianBlue-700 hover:bg-syrianBlue-600 text-gold-300 border border-gold-500/30 transition cursor-pointer" title="سورة عشوائية">
+                        <i class="fa-solid fa-shuffle"></i>
+                    </button>
+                </div>
+                <audio id="quranAudioPlayer" class="hidden" preload="none" src="https://server8.mp3quran.net/afs/001.mp3"></audio>
+            </div>
+
+            <!-- CARD 2: NATURAL AMBIENT SOUNDS -->
+            <div class="glass-card rounded-2xl p-5 border border-medical-500/30 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-base font-bold text-medical-300 flex items-center gap-2">
+                            <i class="fa-solid fa-cloud-rain text-lg text-medical-400"></i>
+                            خلفيات طبيعية للمذاكرة (Web Audio Synthesizer)
+                        </h3>
+                        <span class="text-[10px] bg-medical-500/20 text-medical-300 border border-medical-500/30 px-2 py-0.5 rounded-full">توليد برمجي نقي</span>
+                    </div>
+
+                    <p class="text-xs text-gray-300 mb-3">شغّل أصوات المطر أو الأمواج لعزل الضوضاء وتحسين الاستيعاب:</p>
+
+                    <div class="grid grid-cols-2 gap-2.5">
+                        <!-- Rain -->
+                        <div class="bg-syrianBlue-900/80 p-2.5 rounded-xl border border-medical-500/20 flex flex-col justify-between">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-xs font-bold text-gray-200 flex items-center gap-1.5">
+                                    <i class="fa-solid fa-cloud-showers-heavy text-medical-400"></i> المطر
+                                </span>
+                                <button id="ambRainToggle" class="w-6 h-6 rounded-lg bg-syrianBlue-700 text-gray-400 hover:text-white flex items-center justify-center cursor-pointer text-xs">
+                                    <i class="fa-solid fa-power-off"></i>
+                                </button>
+                            </div>
+                            <input type="range" id="ambRainVol" min="0" max="100" value="40" class="w-full h-1 bg-syrianBlue-700 rounded cursor-pointer">
+                        </div>
+
+                        <!-- Ocean Waves -->
+                        <div class="bg-syrianBlue-900/80 p-2.5 rounded-xl border border-medical-500/20 flex flex-col justify-between">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-xs font-bold text-gray-200 flex items-center gap-1.5">
+                                    <i class="fa-solid fa-water text-medical-400"></i> أمواج البحر
+                                </span>
+                                <button id="ambWavesToggle" class="w-6 h-6 rounded-lg bg-syrianBlue-700 text-gray-400 hover:text-white flex items-center justify-center cursor-pointer text-xs">
+                                    <i class="fa-solid fa-power-off"></i>
+                                </button>
+                            </div>
+                            <input type="range" id="ambWavesVol" min="0" max="100" value="40" class="w-full h-1 bg-syrianBlue-700 rounded cursor-pointer">
+                        </div>
+
+                        <!-- Soft Wind -->
+                        <div class="bg-syrianBlue-900/80 p-2.5 rounded-xl border border-medical-500/20 flex flex-col justify-between">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-xs font-bold text-gray-200 flex items-center gap-1.5">
+                                    <i class="fa-solid fa-wind text-medical-400"></i> هبوب الرياح
+                                </span>
+                                <button id="ambWindToggle" class="w-6 h-6 rounded-lg bg-syrianBlue-700 text-gray-400 hover:text-white flex items-center justify-center cursor-pointer text-xs">
+                                    <i class="fa-solid fa-power-off"></i>
+                                </button>
+                            </div>
+                            <input type="range" id="ambWindVol" min="0" max="100" value="40" class="w-full h-1 bg-syrianBlue-700 rounded cursor-pointer">
+                        </div>
+
+                        <!-- Birds Chirping -->
+                        <div class="bg-syrianBlue-900/80 p-2.5 rounded-xl border border-medical-500/20 flex flex-col justify-between">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-xs font-bold text-gray-200 flex items-center gap-1.5">
+                                    <i class="fa-solid fa-feather-pointed text-medical-400"></i> تغريد العصافير
+                                </span>
+                                <button id="ambBirdsToggle" class="w-6 h-6 rounded-lg bg-syrianBlue-700 text-gray-400 hover:text-white flex items-center justify-center cursor-pointer text-xs">
+                                    <i class="fa-solid fa-power-off"></i>
+                                </button>
+                            </div>
+                            <input type="range" id="ambBirdsVol" min="0" max="100" value="40" class="w-full h-1 bg-syrianBlue-700 rounded cursor-pointer">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-4 pt-3 border-t border-medical-500/10 text-[11px] text-gray-400 flex items-center justify-between">
+                    <span>دمج الأصوات لبيئة مذاكرة مريحة</span>
+                    <span id="activeAmbientCount" class="text-medical-400 font-bold">0 شغال</span>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- 5. AI MENTOR CHATBOT (محادثة مع الذكاء الاصطناعي للمساعدة وحل المشاكل) -->
+        <section class="glass-card-medical rounded-2xl p-6 border border-medical-500/40 shadow-xl">
+            <div class="flex items-center justify-between mb-4 border-b border-medical-500/20 pb-3">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-medical-600/30 border border-medical-400/40 flex items-center justify-center text-medical-300 text-lg shadow">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-base font-bold text-white flex items-center gap-2 font-cairo">
+                            مستشارك الذكي لطالب البكالوريا (دعم الذكاء الاصطناعي 24/7)
+                        </h3>
+                        <p class="text-xs text-medical-300">اسأل عن أي سؤال صعب، استفسر عن خطة الدراسة، أو اطلب نصيحة فيزيائية أو علمية</p>
+                    </div>
+                </div>
+                <button id="clearAiChatBtn" class="text-[11px] bg-syrianBlue-900 text-gray-300 hover:text-white px-3 py-1.5 rounded-xl border border-medical-500/30 cursor-pointer transition">
+                    <i class="fa-solid fa-trash-can ml-1"></i> مسح المحادثة
+                </button>
+            </div>
+
+            <!-- Chat Window -->
+            <div id="aiChatWindow" class="bg-syrianBlue-900/90 rounded-2xl p-4 h-72 overflow-y-auto space-y-3 border border-medical-500/20 mb-3 shadow-inner">
+                <!-- Initial AI Greeting Message -->
+                <div class="flex items-start gap-2.5">
+                    <div class="w-8 h-8 rounded-xl bg-medical-600 text-white flex items-center justify-center text-xs shrink-0 font-bold">AI</div>
+                    <div class="glass-card p-3 rounded-2xl rounded-tr-none text-xs text-gray-100 max-w-xl leading-relaxed border border-medical-500/30">
+                        أهلاً بك يا زميل الطبيب! أنا مستشارك الذكي المرافق لك في رحلة بكالوريا 2027. هل تواجه سؤالاً صعباً في الفيزياء، أو استفساراً في العلوم والرياضيات؟ اطرح سؤالك الآن وسأقوم بمساعدتك وحلّه خطوة بخطوة! 🩺✨
+                    </div>
+                </div>
+            
+                <div class="flex items-start gap-2.5 justify-end">
+                    <div class="bg-medical-600/80 p-3 rounded-2xl rounded-tl-none text-xs text-white max-w-xl leading-relaxed border border-medical-400/30">
+                        كيف أنظم وقت دراستي للمادة الصعبة؟
+                    </div>
+                    <div class="w-8 h-8 rounded-xl bg-syrianBlue-800 text-gold-300 flex items-center justify-center text-xs shrink-0 font-bold border border-gold-500/30">أنا</div>
+                </div>
+            
+                <div class="flex items-start gap-2.5">
+                    <div class="w-8 h-8 rounded-xl bg-medical-600 text-white flex items-center justify-center text-xs shrink-0 font-bold">AI</div>
+                    <div class="glass-card p-3 rounded-2xl rounded-tr-none text-xs text-gray-100 max-w-xl leading-relaxed border border-medical-500/30">
+                        لتنظيم الوقت: خصص ساعات الصباح الباكر للمواد الحفظية (علوم/حفظ) وساعات الظهيرة والمساء للمواد التحليلية (رياضيات/فيزياء/كيمياء).
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat Input Form -->
+            <form id="aiChatForm" class="flex items-center gap-2">
+                <input type="text" id="aiChatInput" required="" placeholder="اكتب سؤالك الصعب أو استفسارك هنا (مثال: اشرح لي العصبون أو مسألة فيزياء)..." class="flex-grow bg-syrianBlue-900 border border-medical-500/40 rounded-xl p-3 text-xs text-white focus:outline-none focus:border-medical-400 font-tajawal">
+                <button type="submit" class="px-5 py-3 rounded-xl bg-gradient-to-r from-medical-600 to-medical-500 hover:from-medical-500 hover:to-medical-400 text-white font-bold text-xs shadow-lg transition cursor-pointer flex items-center gap-2 shrink-0">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <span>إرسال</span>
+                </button>
+            </form>
+            <div class="flex flex-wrap items-center gap-2 mt-2 pt-2 border-t border-medical-500/10 text-[11px]">
+                <span class="text-gray-400">أدوات مساعدة سريعة:</span>
+                <button type="button" class="quick-prompt-btn px-2.5 py-1 rounded-lg bg-syrianBlue-900 hover:bg-syrianBlue-800 text-medical-300 border border-medical-500/20 cursor-pointer" data-prompt="كيف أنظم وقت دراستي للمادة الصعبة؟">كيف أنظم وقت دراستي؟</button>
+                <button type="button" class="quick-prompt-btn px-2.5 py-1 rounded-lg bg-syrianBlue-900 hover:bg-syrianBlue-800 text-medical-300 border border-medical-500/20 cursor-pointer" data-prompt="عطني نصيحة ذهبية لتثبيت حفظ العلوم والأحياء">نصيحة لحفظ العلوم</button>
+                <button type="button" class="quick-prompt-btn px-2.5 py-1 rounded-lg bg-syrianBlue-900 hover:bg-syrianBlue-800 text-medical-300 border border-medical-500/20 cursor-pointer" data-prompt="كيف أتغلب على التوتر والخوف من البكالوريا؟">التغلب على التوتر</button>
+            </div>
+        </section>
+
+
+        <!-- WEEKLY TIMETABLE & MONTHLY EXAMS -->
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+            
+            <!-- WEEKLY TIMETABLE (5 CLASSES PER DAY) -->
+            <div class="lg:col-span-7 glass-card rounded-2xl p-5 border border-gold-500/30">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-base font-bold text-gold-300 flex items-center gap-2">
+                        <i class="fa-solid fa-calendar-week text-gold-400"></i>
+                        برنامج الأسبوع (5 حصص يومياً)
+                    </h3>
+                    <button id="resetTimetableBtn" class="text-xs text-gray-400 hover:text-gold-300 flex items-center gap-1 transition cursor-pointer">
+                        <i class="fa-solid fa-rotate-right text-[10px]"></i> مسح/إعادة ضبط
+                    </button>
+                </div>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-xs text-center border-collapse min-w-[500px]">
+                        <thead>
+                            <tr class="bg-syrianBlue-900/90 text-gold-300 border-b border-gold-500/20">
+                                <th class="p-2 border-r border-gold-500/10 w-20">اليوم</th>
+                                <th class="p-2 border-r border-gold-500/10">الحصة 1</th>
+                                <th class="p-2 border-r border-gold-500/10">الحصة 2</th>
+                                <th class="p-2 border-r border-gold-500/10">الحصة 3</th>
+                                <th class="p-2 border-r border-gold-500/10">الحصة 4</th>
+                                <th class="p-2">الحصة 5</th>
+                            </tr>
+                        </thead>
+                        <tbody id="timetableBody" class="divide-y divide-gold-500/10 text-gray-200"><tr class="border-b border-gold-500/10 hover:bg-syrianBlue-800/40 transition">
+                    <th class="p-2.5 font-bold text-gold-300 border-r border-gold-500/10 bg-syrianBlue-900/40">الأحد</th><td class="p-2.5 border-r border-gold-500/10 cursor-pointer text-gray-200 hover:text-gold-200" title="اضغط للتعديل" data-day="الأحد" data-index="0">علم الأحياء (وراثة)</td><td class="p-2.5 border-r border-gold-500/10 cursor-pointer text-gray-200 hover:text-gold-200" title="اضغط للتعديل" data-day="الأحد" data-index="1">الفيزياء (أمواج)</td><td class="p-2.5 border-r border-gold-500/10 cursor-pointer text-gray-200 hover:text-gold-200" title="اضغط للتعديل" data-day="الأحد" data-index="2">الرياضيات (تفاضل)</td><td class="p-2.5 border-r border-gold-500/10 cursor-pointer text-gray-200 hover:text-gold-200" title="اضغط للتعديل" data-day="الأحد" data-index="3">الكيمياء (عضوية)</td><td class="p-2.5 border-r border-gold-500/10 cursor-pointer text-gray-200 hover:text-gold-200" title="اضغط للتعديل" data-day="الأحد" data-index="4">اللغة العربية</td></tr><tr class="border-b border-gold-500/10 hover:bg-syrianBlue-800/40 transition">
+                    <th class="p-2.5 font-bold text-gold-300 border-r border-gold-500/10 bg-syrianBlue-900/40">الإثنين</th><td class="p-2.5 border-r border-gold-500/10 cursor-pointer text-gray-200 hover:text-gold-200" title="اضغط للتعديل" data-day="الإثنين" data-index="0">الرياضيات (تكامل)</td><td class="p-2.5 border-r border-gold-500/10 cursor-pointer text-gray-200 hover:text-gold-200" title="اضغط للتعديل" data-day="الإثنين" data-index="1">علم الأحياء (مناعة)</td><td class="p-2.5 border-r border-gold-500/10 cursor-pointer text-gray-200 hover:text-gold-200" title="اضغط للتعديل" data-day="الإثنين" data-index="2">الفيزياء (مغناطيسية)</td><td class="p-2.5 border-r border-gold-500/10 cursor-pointer text-gray-200 hover:text-gold-200" title="اضغط للتعديل" data-day="الإثنين" data-index="3">التربية الإسلامية</td><td class="p-2.5 border-r border-gold-500/10 cursor-pointer text-gray-200 hover:text-gold-200" title="اضغط للتعديل" data-day="الإثنين" data-index="4">اللغة الإنجليزية</td></tr><tr class="border-b border-gold-500/10 hover:bg-syrianBlue-800/40 transition">
+                    <th class="p-2.5 font-bold text-gold-300 border-r border-gold-500/10 bg-syrianBlue-900/40">الثلاثاء</th><td class="p-2.5 border-r border-gold-500/10 cursor-pointer text-gray-200 hover:text-gold-200" title="اضغط للتعديل" data-day="الثلاثاء" data-index="0">الكيمياء (توازن)</td><td class="p-2.5 border-r border-gold-500/10 cursor-pointer text-gray-200 hover:text-gold-200" title="اضغط للتعديل" data-day="الثلاثاء" data-index="1">علم الأحياء (عصبية)</td><td class="p-2.5 border-r border-gold-500/10 cursor-pointer text-gray-200 hover:text-gold-200" title="اضغط للتعديل" data-day="الثلاثاء" data-index="2">الرياضيات (عقدية)</td><td class="p-2.5 border-r border-gold-500/10 cursor-pointer text-gray-200 hover:text-gold-200" title="اضغط للتعديل" data-day="الثلاثاء" data-index="3">الفيزياء (نووية)</td><td class="p-2.5 border-r border-gold-500/10 cursor-pointer text-gray-200 hover:text-gold-200" title="اضغط للتعديل" data-day="الثلاثاء" data-index="4">اللغة الفرنسية</td></tr><tr class="border-b border-gold-500/10 hover:bg-syrianBlue-800/40 transition">
+                    <th class="p-2.5 font-bold text-gold-300 border-r border-gold-500/10 bg-syrianBlue-900/40">الأربعاء</th><td class="p-2.5 border-r border-gold-500/10 cursor-pointer text-gray-200 hover:text-gold-200" title="اضغط للتعديل" data-day="الأربعاء" data-index="0">الفيزياء (كهرباء)</td><td class="p-2.5 border-r border-gold-500/10 cursor-pointer text-gray-200 hover:text-gold-200" title="اضغط للتعديل" data-day="الأربعاء" data-index="1">علم الأحياء (مورثات)</td><td class="p-2.5 border-r border-gold-500/10 cursor-pointer text-gray-200 hover:text-gold-200" title="اضغط للتعديل" data-day="الأربعاء" data-index="2">الرياضيات (هندسة)</td><td class="p-2.5 border-r border-gold-500/10 cursor-pointer text-gray-200 hover:text-gold-200" title="اضغط للتعديل" data-day="الأربعاء" data-index="3">الكيمياء (عضوية)</td><td class="p-2.5 border-r border-gold-500/10 cursor-pointer text-gray-200 hover:text-gold-200" title="اضغط للتعديل" data-day="الأربعاء" data-index="4">اللغة العربية</td></tr><tr class="border-b border-gold-500/10 hover:bg-syrianBlue-800/40 transition">
+                    <th class="p-2.5 font-bold text-gold-300 border-r border-gold-500/10 bg-syrianBlue-900/40">الخميس</th><td class="p-2.5 border-r border-gold-500/10 cursor-pointer text-gray-200 hover:text-gold-200" title="اضغط للتعديل" data-day="الخميس" data-index="0">مراجعة شاملة علوم</td><td class="p-2.5 border-r border-gold-500/10 cursor-pointer text-gray-200 hover:text-gold-200" title="اضغط للتعديل" data-day="الخميس" data-index="1">امتحان تجريبي رياضيات</td><td class="p-2.5 border-r border-gold-500/10 cursor-pointer text-gray-200 hover:text-gold-200" title="اضغط للتعديل" data-day="الخميس" data-index="2">فيزياء أتمتة</td><td class="p-2.5 border-r border-gold-500/10 cursor-pointer text-gray-200 hover:text-gold-200" title="اضغط للتعديل" data-day="الخميس" data-index="3">كيمياء استذكار</td><td class="p-2.5 border-r border-gold-500/10 cursor-pointer text-gray-200 hover:text-gold-200" title="اضغط للتعديل" data-day="الخميس" data-index="4">تخطيط الأسبوع القادم</td></tr></tbody>
+                    </table>
+                </div>
+                <p class="text-[10px] text-gray-400 mt-3 text-left">💡 يمكنك الضغط مباشرة على اسم المادة لتعديلها، وسيتم حفظ التعديلات تلقائياً.</p>
+            </div>
+
+            <!-- MONTHLY EXAMS & QUIZZES -->
+            <div class="lg:col-span-5 glass-card rounded-2xl p-5 border border-medical-500/30 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-base font-bold text-medical-300 flex items-center gap-2">
+                            <i class="fa-solid fa-file-pen text-medical-400"></i>
+                            برنامج المذاكرات والامتحانات الشهري
+                        </h3>
+                        <button id="addExamBtn" class="bg-medical-600 hover:bg-medical-500 text-white text-xs px-2.5 py-1.5 rounded-lg border border-medical-400/30 flex items-center gap-1 shadow cursor-pointer transition">
+                            <i class="fa-solid fa-plus text-[10px]"></i> إضافة امتحان
+                        </button>
+                    </div>
+
+                    <div id="examsList" class="space-y-2.5 max-h-[260px] overflow-y-auto pr-1">
+                    <div class="bg-syrianBlue-900/80 p-3 rounded-xl border border-medical-500/20 flex items-center justify-between gap-3">
+                        <div>
+                            <span class="text-xs font-bold text-white block">علم الأحياء - الوحدة الأولى (عصبية)</span>
+                            <span class="text-[11px] text-medical-300 block mt-0.5"><i class="fa-regular fa-calendar ml-1"></i> 2026-10-15 • مذاكرة شاملة للأتمتة والرسومات</span>
+                        </div>
+                        <button onclick="deleteExam(1)" class="text-gray-400 hover:text-rose-400 p-1.5 cursor-pointer text-xs" title="حذف">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </div>
+                
+                    <div class="bg-syrianBlue-900/80 p-3 rounded-xl border border-medical-500/20 flex items-center justify-between gap-3">
+                        <div>
+                            <span class="text-xs font-bold text-white block">الفيزياء - بحث الأمواج والاهتزازات</span>
+                            <span class="text-[11px] text-medical-300 block mt-0.5"><i class="fa-regular fa-calendar ml-1"></i> 2026-10-28 • حل كافة المسائل الكلاسيكية</span>
+                        </div>
+                        <button onclick="deleteExam(2)" class="text-gray-400 hover:text-rose-400 p-1.5 cursor-pointer text-xs" title="حذف">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </div>
+                
+                    <div class="bg-syrianBlue-900/80 p-3 rounded-xl border border-medical-500/20 flex items-center justify-between gap-3">
+                        <div>
+                            <span class="text-xs font-bold text-white block">الرياضيات - التابع الأسسي واللوغاريتمي</span>
+                            <span class="text-[11px] text-medical-300 block mt-0.5"><i class="fa-regular fa-calendar ml-1"></i> 2026-11-10 • التركيز على الجلسات الامتحانية</span>
+                        </div>
+                        <button onclick="deleteExam(3)" class="text-gray-400 hover:text-rose-400 p-1.5 cursor-pointer text-xs" title="حذف">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+                </div>
+
+                <div class="mt-4 pt-3 border-t border-medical-500/10 flex items-center justify-between text-xs text-gray-400">
+                    <span>تنبيه تلقائي قبل كل امتحان بـ 24 ساعة</span>
+                    <i class="fa-solid fa-shield-halved text-medical-400"></i>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- MEDICAL FUTURE BANNER -->
+        <section class="glass-card-medical rounded-2xl p-6 border border-medical-500/40 relative overflow-hidden">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-4">
+                    <div class="w-16 h-16 rounded-2xl bg-medical-500/20 border border-medical-400/40 flex items-center justify-center text-medical-300 text-3xl shadow-lg">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white flex items-center gap-2 font-cairo">
+                            محطة الحلم: <span class="medical-gradient-text">دكتور المستقبل • الطب البشري</span>
+                        </h3>
+                        <p class="text-xs text-gray-300 mt-1 max-w-xl leading-relaxed">
+                            "تذكر دائماً أن التعب اليوم هو البذرة لارتداء المئزر الأبيض غداً. آلاف المرضى بانتظار علمك ويدك الرحيمة في المستقبل."
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-3 w-full md:w-auto justify-end">
+                    <div class="text-center px-4 py-3 rounded-2xl bg-syrianBlue-900/90 border border-gold-500/30">
+                        <span class="text-[10px] text-gold-400 font-bold block">المجموع المستهدف</span>
+                        <span class="text-xl font-black text-white font-cairo">240 / 240</span>
+                    </div>
+                    <div class="text-center px-4 py-3 rounded-2xl bg-medical-900/80 border border-medical-400/30">
+                        <span class="text-[10px] text-medical-300 font-bold block">التخصص المنشود</span>
+                        <span class="text-sm font-extrabold text-medical-100 font-cairo">الطب البشري 🩺</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- IN-APP FLOATING TIMER OVERLAY WIDGET -->
+    <div id="floatingTimerWidget" class="fixed bottom-6 right-6 z-50 glass-card-medical p-4 rounded-2xl border border-gold-500/50 shadow-2xl hidden max-w-xs w-full transition-all">
+        <div class="flex items-center justify-between mb-2 pb-1 border-b border-gold-500/20">
+            <span class="text-xs font-bold text-gold-300 flex items-center gap-1.5">
+                <i class="fa-solid fa-stopwatch text-medical-400"></i> مؤقت طبيب المستقبل عمرو
+            </span>
+            <button id="closeFloatWidgetBtn" class="text-gray-400 hover:text-white text-xs p-1 cursor-pointer">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div id="floatTimerDisplay" class="text-2xl font-mono font-bold text-center gold-gradient-text my-1">00:01:10</div>
+        <div class="flex items-center justify-center gap-2 mt-2">
+            <button id="floatToggleBtn" class="px-3 py-1 rounded-lg bg-medical-600 hover:bg-medical-500 text-white text-xs font-bold cursor-pointer">
+                تشغيل / إيقاف
+            </button>
+            <button id="floatResetBtn" class="px-2 py-1 rounded-lg bg-syrianBlue-700 hover:bg-syrianBlue-600 text-gold-300 text-xs cursor-pointer">
+                تصفير
+            </button>
+        </div>
+    </div>
+
+    <!-- ADD EXAM MODAL -->
+    <div id="examModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="glass-card rounded-2xl p-6 border border-gold-500/40 max-w-md w-full space-y-4">
+            <div class="flex justify-between items-center border-b border-gold-500/20 pb-3">
+                <h3 class="text-base font-bold text-gold-300 flex items-center gap-2">
+                    <i class="fa-solid fa-calendar-plus text-medical-400"></i>
+                    إضافة مذاكرة / امتحان جديد
+                </h3>
+                <button id="closeExamModalBtn" class="text-gray-400 hover:text-white cursor-pointer"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <form id="examForm" class="space-y-3 text-xs">
+                <div>
+                    <label class="block text-gray-300 mb-1">اسم المادة (مثال: العلوم - عصبية):</label>
+                    <input type="text" id="examSubjectInput" required="" placeholder="أدخل اسم المادة..." class="w-full bg-syrianBlue-900 border border-gold-500/30 rounded-xl p-2.5 text-white focus:outline-none focus:border-gold-400">
+                </div>
+
+                <div>
+                    <label class="block text-gray-300 mb-1">تاريخ الامتحان:</label>
+                    <input type="date" id="examDateInput" required="" class="w-full bg-syrianBlue-900 border border-gold-500/30 rounded-xl p-2.5 text-white focus:outline-none focus:border-gold-400">
+                </div>
+
+                <div>
+                    <label class="block text-gray-300 mb-1">ملاحظات / الدروس المطلوبة:</label>
+                    <textarea id="examNotesInput" rows="2" placeholder="مثال: من الصفحة 12 إلى 45..." class="w-full bg-syrianBlue-900 border border-gold-500/30 rounded-xl p-2.5 text-white focus:outline-none focus:border-gold-400"></textarea>
+                </div>
+
+                <div class="flex items-center justify-end gap-2 pt-2">
+                    <button type="button" id="cancelExamBtn" class="px-4 py-2 rounded-xl bg-syrianBlue-700 text-gray-300 hover:bg-syrianBlue-600 transition cursor-pointer">إلغاء</button>
+                    <button type="submit" class="px-5 py-2 rounded-xl bg-medical-600 hover:bg-medical-500 text-white font-bold transition cursor-pointer">حفظ الامتحان</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <!-- SETTINGS MODAL -->
+    <div id="settingsModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
+        <div class="glass-card-medical w-full max-w-xl rounded-3xl p-6 border border-medical-500/40 shadow-2xl max-h-[90vh] overflow-y-auto">
+            <div class="flex items-center justify-between gap-3 mb-5">
+                <div>
+                    <h2 class="text-xl font-black text-white font-cairo">إعدادات التطبيق</h2>
+                    <p class="text-xs text-gray-400 mt-1">تحكم بالمظهر والتنبيهات وطريقة عرض التطبيق.</p>
+                </div>
+                <button id="closeSettingsBtn" class="w-10 h-10 rounded-xl glass-card text-gray-300 hover:text-white cursor-pointer">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="space-y-3">
+                <div class="p-4 rounded-2xl bg-syrianBlue-900/60 border border-gold-500/20">
+                    <div class="flex items-center justify-between gap-4">
+                        <div>
+                            <div class="font-bold text-white">إشعارات التطبيق</div>
+                            <div class="text-[11px] text-gray-400 mt-1">اسمح للتطبيق بإرسال التذكيرات والتنبيهات.</div>
+                        </div>
+                        <button id="settingsNotifyBtn" class="px-3 py-2 rounded-xl bg-medical-600 text-white text-xs font-bold cursor-pointer">تفعيل</button>
+                    </div>
+                    <div id="notificationStatus" class="text-[11px] text-medical-300 mt-2"></div>
+                </div>
+
+                <label class="flex items-center justify-between gap-4 p-4 rounded-2xl bg-syrianBlue-900/60 border border-medical-500/20 cursor-pointer">
+                    <span>
+                        <span class="font-bold text-white block">تذكير الدوام</span>
+                        <span class="text-[11px] text-gray-400">الأحد إلى الجمعة، الساعة 4:00 م، قبل الدوام بنصف ساعة.</span>
+                    </span>
+                    <input id="schoolReminderToggle" type="checkbox" class="w-5 h-5 accent-teal-500">
+                </label>
+
+                <label class="flex items-center justify-between gap-4 p-4 rounded-2xl bg-syrianBlue-900/60 border border-medical-500/20 cursor-pointer">
+                    <span>
+                        <span class="font-bold text-white block">تذكير الامتحانات والمذاكرات</span>
+                        <span class="text-[11px] text-gray-400">إشعار قبل موعد كل امتحان بـ 24 ساعة.</span>
+                    </span>
+                    <input id="examReminderToggle" type="checkbox" class="w-5 h-5 accent-teal-500">
+                </label>
+
+                <label class="flex items-center justify-between gap-4 p-4 rounded-2xl bg-syrianBlue-900/60 border border-medical-500/20 cursor-pointer">
+                    <span>
+                        <span class="font-bold text-white block">رسالة تحفيزية كل ساعة أثناء الدوام</span>
+                        <span class="text-[11px] text-gray-400">بيت شعر أو آية أو حديث أو عبارة، بين 5:00 م و8:00 م في أيام الدوام.</span>
+                    </span>
+                    <input id="hourlyMotivationToggle" type="checkbox" class="w-5 h-5 accent-teal-500">
+                </label>
+
+                <label class="flex items-center justify-between gap-4 p-4 rounded-2xl bg-syrianBlue-900/60 border border-medical-500/20 cursor-pointer">
+                    <span>
+                        <span class="font-bold text-white block">فتح التطبيق بوضع ملء الشاشة</span>
+                        <span class="text-[11px] text-gray-400">يعمل عند فتح التطبيق بعد تثبيته، مع مراعاة قيود المتصفح.</span>
+                    </span>
+                    <input id="fullscreenOnOpenToggle" type="checkbox" class="w-5 h-5 accent-teal-500">
+                </label>
+
+                <div class="p-4 rounded-2xl bg-syrianBlue-900/60 border border-gold-500/20">
+                    <div class="font-bold text-white mb-2">المظهر</div>
+                    <div class="flex gap-2">
+                        <button id="settingsDarkBtn" class="flex-1 px-3 py-2 rounded-xl bg-syrianBlue-800 text-white text-xs font-bold cursor-pointer">داكن</button>
+                        <button id="settingsLightBtn" class="flex-1 px-3 py-2 rounded-xl bg-white text-slate-800 text-xs font-bold cursor-pointer">فاتح</button>
+                    </div>
+                </div>
+
+                <div class="p-4 rounded-2xl bg-syrianBlue-900/60 border border-medical-500/20">
+                    <div class="font-bold text-white">التثبيت على الشاشة الرئيسية</div>
+                    <p class="text-[11px] text-gray-400 mt-1">بعد فتح التطبيق من Chrome اضغط «تثبيت كـ App» أو من قائمة المتصفح اختر «إضافة إلى الشاشة الرئيسية».</p>
+                    <button id="settingsInstallBtn" class="mt-3 w-full px-4 py-2.5 rounded-xl bg-gold-500 text-syrianBlue-900 font-extrabold text-xs cursor-pointer">
+                        <i class="fa-solid fa-mobile-screen-button ml-1"></i> تثبيت التطبيق
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="max-w-7xl mx-auto w-full mt-8 pt-4 border-t border-gold-500/20 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-400 gap-3 text-center">
+        <div class="flex items-center gap-2">
+            <span class="font-quran text-gold-400 text-base">«بكالوريا سوريا 2027»</span>
+            <span>•</span>
+            <span class="text-medical-300">طبيب المستقبل كُن قويًا من أجل حلمك</span>
+        </div>
+        <div class="text-gold-300/80 font-quran text-sm">
+            ﴿وَقُل رَّبِّ زِدْنِي عِلْمًا﴾
+        </div>
+        <div>
+            © 2026 جميع الحقوق محفوظة - تطبيق التميز للطب البشري
+        </div>
+    </footer>
+
+    <script>
+        // PWA setup: real manifest + service worker.
+        (function setupPWA() {
+            const manifestLink = document.getElementById('manifestLink');
+            if (manifestLink) manifestLink.href = 'manifest.json';
+
+            if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
+                navigator.serviceWorker.register('sw.js').catch(() => {});
+            }
+        })();
+
+// Handle PWA Install Prompt
+        let deferredPrompt = null;
+        const pwaInstallBtn = document.getElementById('pwaInstallBtn');
+
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            if (pwaInstallBtn) {
+                pwaInstallBtn.classList.remove('hidden');
+            }
+        });
+
+        async function installPWA() {
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                const { outcome } = await deferredPrompt.userChoice;
+                if (outcome === 'accepted') pwaInstallBtn?.classList.add('hidden');
+                deferredPrompt = null;
+            } else {
+                alert('إذا لم يظهر طلب التثبيت تلقائياً، افتح قائمة Chrome ثم اختر «إضافة إلى الشاشة الرئيسية» أو «تثبيت التطبيق».');
+            }
+        }
+        pwaInstallBtn?.addEventListener('click', installPWA);
+        document.getElementById('settingsInstallBtn')?.addEventListener('click', installPWA);
+
+        // Online/Offline status
+        function updateOnlineStatus() {
+            const badge = document.getElementById('appStatusBadge');
+            if (badge) {
+                if (navigator.onLine) {
+                    badge.className = "text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 font-bold flex items-center gap-1";
+                    badge.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span><span>تطبيق متصل</span>`;
+                } else {
+                    badge.className = "text-[10px] px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/40 font-bold flex items-center gap-1";
+                    badge.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span><span>عمل بدون إنترنت</span>`;
+                }
+            }
+        }
+        window.addEventListener('online', updateOnlineStatus);
+        window.addEventListener('offline', updateOnlineStatus);
+
+        const EXAM_DATE = new Date('2027-06-06T08:00:00+03:00').getTime();
+
+        const STORAGE_SHOWN_QUOTES = 'bac2027_shown_quotes_history';
+        const STORAGE_TIMETABLE = 'bac2027_timetable_data';
+        const STORAGE_EXAMS = 'bac2027_exams_data';
+        const STORAGE_STUDY_TODAY = 'bac2027_study_today_secs';
+        const STORAGE_STUDY_LAST_DATE = 'bac2027_study_last_date';
+        const STORAGE_WEEKLY_DATA = 'bac2027_weekly_study_stats_v2';
+        const STORAGE_AI_CHAT = 'bac2027_ai_chat_history';
+
+        const MOTIVATIONAL_QUOTES = [
+            { type: 'quran', category: 'آية قرآنية', icon: 'fa-book-quran', text: "وَأَن لَّيْسَ لِلإِنسَانِ إِلاَّ مَا سَعَى وَأَنَّ سَعْيَهُ سَوْفَ يُرَى", author: "سورة النجم: 39-40" },
+            { type: 'quran', category: 'آية قرآنية', icon: 'fa-book-quran', text: "إِنَّا لا نُضِيعُ أَجْرَ مَنْ أَحْسَنَ عَمَلاً", author: "سورة الكهف: 30" },
+            { type: 'quran', category: 'آية قرآنية', icon: 'fa-book-quran', text: "وَقُل رَّبِّ زِدْنِي عِلْمًا", author: "سورة طه: 114" },
+            { type: 'quran', category: 'آية قرآنية', icon: 'fa-book-quran', text: "فَإِنَّ مَعَ العُسْرِ يُسْرًا • إِنَّ مَعَ العُسْرِ يُسْرًا", author: "سورة الشرح: 5-6" },
+            { type: 'quran', category: 'آية قرآنية', icon: 'fa-book-quran', text: "وَالَّذِينَ جَاهَدُوا فِينَا لَنَهْدِيَنَّهُمْ سُبُلَنَا وَإِنَّ اللَّهَ لَمَعَ الْمُحْسِنِينَ", author: "سورة العنكبوت: 69" },
+            { type: 'hadith', category: 'حديث شريف', icon: 'fa-kaaba', text: "مَنْ سَلَكَ طَرِيقًا يَلْتَمِسُ فِيهِ عِلْمًا سَهَّلَ اللَّهُ لَهُ بِهِ طَرِيقًا إِلَى الْجَنَّةِ", author: "صحيح مسلم" },
+            { type: 'hadith', category: 'حديث شريف', icon: 'fa-kaaba', text: "إِنَّ اللَّهَ يُحِبُّ إِذَا عَمِلَ أَحَدُكُمْ عَمَلاً أَنْ يُتْقِنَهُ", author: "حديث شريف" },
+            { type: 'poem', category: 'بيت شعر', icon: 'fa-feather-pointed', text: "لأَسْتَهِلَنَّ الصَّعْبَ أَوْ أُلْتَقَى المُنَى ... فَمَا انْقَادَتِ الآمَالُ إِلاَّ لِصَابِرِ", author: "أبو تمام" },
+            { type: 'poem', category: 'بيت شعر', icon: 'fa-feather-pointed', text: "عَلَى قَدْرِ أَهْلِ العَزْمِ تَأْتِي العَزَائِمُ ... وَتَأْتِي عَلَى قَدْرِ الكِرَامِ المَكَارِمُ", author: "المتنبي" },
+            { type: 'medical', category: 'مقولة طبية', icon: 'fa-user-doctor', text: "ارتداء المئزر الأبيض وتخفيف آلام البشر يحتاج إلى عرق وسهر اليوم.. اضغط على نفسك يا طبيب المستقبل!", author: "طبيب المستقبل عمرو نعمة" },
+            { type: 'medical', category: 'مقولة طبية', icon: 'fa-stethoscope', text: "كل دقيقة تدرسها الآن تقرّبك خطوة حقيقية نحو حلمك في كلية الطب البشري 🩺", author: "بكالوريا سوريا 2027" }
+        ];
+
+        // Countdown Calculator (Fixed "دقائق")
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = EXAM_DATE - now;
+
+            if (distance < 0) {
+                document.getElementById('timerMonths').textContent = "00";
+                document.getElementById('timerDays').textContent = "00";
+                document.getElementById('timerHours').textContent = "00";
+                document.getElementById('timerMinutes').textContent = "00";
+                document.getElementById('timerSeconds').textContent = "00";
+                return;
+            }
+
+            const totalDaysLeft = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const monthsLeft = Math.floor(totalDaysLeft / 30);
+            const daysLeft = totalDaysLeft % 30;
+
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('timerMonths').textContent = String(monthsLeft).padStart(2, '0');
+            document.getElementById('timerDays').textContent = String(daysLeft).padStart(2, '0');
+            document.getElementById('timerHours').textContent = String(hours).padStart(2, '0');
+            document.getElementById('timerMinutes').textContent = String(minutes).padStart(2, '0');
+            document.getElementById('timerSeconds').textContent = String(seconds).padStart(2, '0');
+        }
+
+        // Rotating Quotes Banner
+        let currentQuoteObj = MOTIVATIONAL_QUOTES[0];
+
+        function updateMotivationalBanner() {
+            let history = JSON.parse(localStorage.getItem(STORAGE_SHOWN_QUOTES) || '[]');
+            const now = Date.now();
+            const twoHoursMs = 2 * 60 * 60 * 1000;
+
+            history = history.filter(item => (now - item.time) < twoHoursMs);
+
+            const shownIndices = history.map(item => item.index);
+            let availableIndices = MOTIVATIONAL_QUOTES.map((_, idx) => idx).filter(idx => !shownIndices.includes(idx));
+
+            if (availableIndices.length === 0) {
+                availableIndices = MOTIVATIONAL_QUOTES.map((_, idx) => idx);
+                history = [];
+            }
+
+            const chosenIndex = availableIndices[Math.floor(Math.random() * availableIndices.length)];
+            currentQuoteObj = MOTIVATIONAL_QUOTES[chosenIndex];
+
+            history.push({ index: chosenIndex, time: now });
+            localStorage.setItem(STORAGE_SHOWN_QUOTES, JSON.stringify(history));
+
+            const quoteContainer = document.getElementById('quoteContainer');
+            if (quoteContainer) {
+                quoteContainer.style.opacity = '0';
+                quoteContainer.style.transform = 'translateY(10px)';
+
+                setTimeout(() => {
+                    document.getElementById('quoteText').textContent = `"${currentQuoteObj.text}"`;
+                    document.getElementById('quoteAuthor').textContent = `[${currentQuoteObj.author}]`;
+                    quoteContainer.style.opacity = '1';
+                    quoteContainer.style.transform = 'translateY(0)';
+                }, 300);
+            }
+        }
+
+        function sendPersistentSystemNotification(quoteObj) {
+            if (!('Notification' in window)) return;
+            const q = quoteObj || currentQuoteObj;
+
+            if (Notification.permission === 'granted') {
+                try {
+                    new Notification(`📌 [${q.category}] • بكالوريا 2027`, {
+                        body: `${q.text}\n— ${q.author}`,
+                        icon: 'https://cdn-icons-png.flaticon.com/512/387/387561.png',
+                        requireInteraction: true
+                    });
+                } catch (e) {}
+            } else {
+                Notification.requestPermission().then(permission => {
+                    if (permission === 'granted') sendPersistentSystemNotification(q);
+                });
+            }
+        }
+
+
+        // Notification settings & scheduler
+        const NOTIFY_SETTINGS_KEY = 'bac2027_notification_settings_v2';
+        const NOTIFY_SENT_KEY = 'bac2027_notification_sent_v2';
+        const THEME_KEY = 'bac2027_theme';
+        const FULLSCREEN_KEY = 'bac2027_fullscreen_on_open';
+
+        const defaultNotifySettings = {
+            school: true,
+            exams: true,
+            hourly: true
+        };
+
+        function getNotifySettings() {
+            try {
+                return {...defaultNotifySettings, ...JSON.parse(localStorage.getItem(NOTIFY_SETTINGS_KEY) || '{}')};
+            } catch (e) {
+                return {...defaultNotifySettings};
+            }
+        }
+
+        function saveNotifySettings(settings) {
+            localStorage.setItem(NOTIFY_SETTINGS_KEY, JSON.stringify(settings));
+        }
+
+        function notificationPermissionText() {
+            if (!('Notification' in window)) return 'هذا المتصفح لا يدعم إشعارات النظام.';
+            if (Notification.permission === 'granted') return 'الإشعارات مفعّلة.';
+            if (Notification.permission === 'denied') return 'الإشعارات مرفوضة من إعدادات المتصفح.';
+            return 'الإشعارات لم تُفعّل بعد.';
+        }
+
+        async function requestNotifications() {
+            if (!('Notification' in window)) {
+                alert('متصفحك لا يدعم إشعارات النظام.');
+                return false;
+            }
+            const permission = await Notification.requestPermission();
+            updateNotificationUI();
+            if (permission === 'granted') {
+                showSystemNotification('تم تفعيل إشعارات بكالوريا 2027', 'سيذكّرك التطبيق بالدوام والامتحانات ورسائل التحفيز.');
+                return true;
+            }
+            return false;
+        }
+
+        function showSystemNotification(title, body, tag = '') {
+            if (!('Notification' in window) || Notification.permission !== 'granted') return;
+            const options = {
+                body,
+                icon: 'icon.svg',
+                badge: 'icon.svg',
+                dir: 'rtl',
+                lang: 'ar',
+                tag: tag || undefined,
+                renotify: false
+            };
+            try {
+                if (navigator.serviceWorker?.controller) {
+                    navigator.serviceWorker.controller.postMessage({type:'SHOW_NOTIFICATION', title, options});
+                } else {
+                    new Notification(title, options);
+                }
+            } catch (e) {}
+        }
+
+        function markNotificationSent(key) {
+            let sent = {};
+            try { sent = JSON.parse(localStorage.getItem(NOTIFY_SENT_KEY) || '{}'); } catch(e) {}
+            const now = Date.now();
+            Object.keys(sent).forEach(k => { if (now - sent[k] > 8 * 86400000) delete sent[k]; });
+            sent[key] = now;
+            localStorage.setItem(NOTIFY_SENT_KEY, JSON.stringify(sent));
+        }
+
+        function wasNotificationSent(key) {
+            try {
+                const sent = JSON.parse(localStorage.getItem(NOTIFY_SENT_KEY) || '{}');
+                return !!sent[key];
+            } catch(e) { return false; }
+        }
+
+        const HOURLY_QUOTES = [
+            {text:'وَقُل رَّبِّ زِدْنِي عِلْمًا', author:'القرآن الكريم — طه: 114', category:'آية'},
+            {text:'إنما العلم بالتعلم، وإنما الحلم بالتحلم.', author:'حديث حسن — رواه الطبراني في الأوسط', category:'حديث'},
+            {text:'ومن يتهيب صعود الجبال يعش أبد الدهر بين الحفر.', author:'أبو القاسم الشابي', category:'شعر'},
+            {text:'لا تؤجل عمل اليوم إلى الغد.', author:'عبارة تحفيزية', category:'تحفيز'},
+            {text:'وَأَن لَّيْسَ لِلْإِنسَانِ إِلَّا مَا سَعَىٰ', author:'القرآن الكريم — النجم: 39', category:'آية'},
+            {text:'العلم يرفع بيوتًا لا عماد لها، والجهل يهدم بيت العز والكرم.', author:'علي بن أبي طالب — يُروى', category:'تحفيز'},
+            {text:'فاصبر إن العاقبة للمتقين.', author:'القرآن الكريم — هود: 49', category:'آية'},
+            {text:'إذا كانت النفوس كبارًا تعبت في مرادها الأجسام.', author:'المتنبي', category:'شعر'}
+        ];
+
+        function getHourlyQuote() {
+            return HOURLY_QUOTES[new Date().getHours() % HOURLY_QUOTES.length];
+        }
+
+        function localDateKey(d = new Date()) {
+            return d.toISOString().slice(0,10);
+        }
+
+        function checkScheduledNotifications() {
+            if (!('Notification' in window) || Notification.permission !== 'granted') return;
+
+            const settings = getNotifySettings();
+            const now = new Date();
+            const day = now.getDay(); // 0 الأحد ... 5 الجمعة، 6 السبت
+            const minutes = now.getHours() * 60 + now.getMinutes();
+
+            // Work reminder: Sunday-Friday at 16:00.
+            if (settings.school && day >= 0 && day <= 5 && now.getHours() === 16 && now.getMinutes() === 0) {
+                const key = `school-${localDateKey(now)}`;
+                if (!wasNotificationSent(key)) {
+                    showSystemNotification('📚 تذكير الدوام', 'دوامك يبدأ الساعة 4:30 م — استعد الآن.', 'school-' + localDateKey(now));
+                    markNotificationSent(key);
+                }
+            }
+
+            // Hourly motivational notification during the work period: 17:00, 18:00, 19:00, 20:00.
+            if (settings.hourly && day >= 0 && day <= 5 && minutes % 60 === 0 && now.getMinutes() === 0 && now.getHours() >= 17 && now.getHours() <= 20) {
+                const key = `hourly-${localDateKey(now)}-${now.getHours()}`;
+                if (!wasNotificationSent(key)) {
+                    const q = getHourlyQuote();
+                    showSystemNotification(`🌟 ${q.category} • بكالوريا 2027`, `${q.text}\n— ${q.author}`, key);
+                    markNotificationSent(key);
+                }
+            }
+
+            // Exam reminder: exactly 24 hours before the exam date at the same local time.
+            if (settings.exams) {
+                let exams = [];
+                try { exams = JSON.parse(localStorage.getItem(STORAGE_EXAMS) || JSON.stringify(DEFAULT_EXAMS)); } catch(e) {}
+                exams.forEach(exam => {
+                    if (!exam?.date) return;
+                    const examDate = new Date(`${exam.date}T16:00:00`);
+                    const diff = examDate.getTime() - now.getTime();
+                    const key = `exam-${exam.id}-${exam.date}`;
+                    if (diff <= 24*60*60*1000 && diff > 23*60*60*1000 && !wasNotificationSent(key)) {
+                        showSystemNotification('📝 تذكير بالمذاكرة والامتحان', `${exam.subject}\nموعده: ${exam.date}`, key);
+                        markNotificationSent(key);
+                    }
+                });
+            }
+        }
+
+        function updateNotificationUI() {
+            const status = document.getElementById('notificationStatus');
+            if (status) status.textContent = notificationPermissionText();
+            const text = document.getElementById('notifyText');
+            const icon = document.getElementById('notifyIcon');
+            if (text) text.textContent = ('Notification' in window && Notification.permission === 'granted') ? 'الإشعارات مفعّلة ✓' : 'تفعيل الإشعارات';
+            if (icon) icon.className = ('fa-solid ' + (('Notification' in window && Notification.permission === 'granted') ? 'fa-bell text-medical-400' : 'fa-bell text-gold-400'));
+        }
+
+        document.getElementById('notifyBtn')?.addEventListener('click', requestNotifications);
+        document.getElementById('settingsNotifyBtn')?.addEventListener('click', requestNotifications);
+
+        // Theme
+        function applyTheme(theme) {
+            const light = theme === 'light';
+            document.body.classList.toggle('light-theme', light);
+            localStorage.setItem(THEME_KEY, light ? 'light' : 'dark');
+            const icon = document.getElementById('themeIcon');
+            const text = document.getElementById('themeText');
+            if (icon) icon.className = `fa-solid ${light ? 'fa-sun text-gold-400' : 'fa-moon text-gold-400'}`;
+            if (text) text.textContent = light ? 'فاتح' : 'داكن';
+        }
+
+        document.getElementById('themeBtn')?.addEventListener('click', () => {
+            applyTheme(document.body.classList.contains('light-theme') ? 'dark' : 'light');
+        });
+        document.getElementById('settingsDarkBtn')?.addEventListener('click', () => applyTheme('dark'));
+        document.getElementById('settingsLightBtn')?.addEventListener('click', () => applyTheme('light'));
+
+        // Settings modal
+        const settingsModal = document.getElementById('settingsModal');
+        function syncSettingsUI() {
+            const s = getNotifySettings();
+            document.getElementById('schoolReminderToggle').checked = s.school;
+            document.getElementById('examReminderToggle').checked = s.exams;
+            document.getElementById('hourlyMotivationToggle').checked = s.hourly;
+            document.getElementById('fullscreenOnOpenToggle').checked = localStorage.getItem(FULLSCREEN_KEY) === '1';
+            updateNotificationUI();
+        }
+        document.getElementById('settingsBtn')?.addEventListener('click', () => {
+            syncSettingsUI();
+            settingsModal?.classList.remove('hidden');
+            settingsModal?.classList.add('flex');
+        });
+        document.getElementById('closeSettingsBtn')?.addEventListener('click', () => {
+            settingsModal?.classList.add('hidden');
+            settingsModal?.classList.remove('flex');
+        });
+        settingsModal?.addEventListener('click', e => {
+            if (e.target === settingsModal) {
+                settingsModal.classList.add('hidden');
+                settingsModal.classList.remove('flex');
+            }
+        });
+
+        ['schoolReminderToggle','examReminderToggle','hourlyMotivationToggle'].forEach(id => {
+            document.getElementById(id)?.addEventListener('change', () => {
+                const s = getNotifySettings();
+                s.school = document.getElementById('schoolReminderToggle').checked;
+                s.exams = document.getElementById('examReminderToggle').checked;
+                s.hourly = document.getElementById('hourlyMotivationToggle').checked;
+                saveNotifySettings(s);
+                syncNotificationScheduleToServiceWorker();
+            });
+        });
+        document.getElementById('fullscreenOnOpenToggle')?.addEventListener('change', e => {
+            localStorage.setItem(FULLSCREEN_KEY, e.target.checked ? '1' : '0');
+        });
+
+        // Existing push button, if present.
+        document.getElementById('pushSystemNotifyBtn')?.addEventListener('click', () => {
+            const q = getHourlyQuote();
+            showSystemNotification(`🌟 ${q.category} • بكالوريا 2027`, `${q.text}\n— ${q.author}`, 'manual-motivation');
+        });
+
+        // Run the scheduler while the app is open.
+        async function syncNotificationScheduleToServiceWorker() {
+            try {
+                const reg = await navigator.serviceWorker?.ready;
+                if (!reg) return;
+                reg.active?.postMessage({
+                    type: 'SYNC_SCHEDULE',
+                    settings: getNotifySettings(),
+                    exams: JSON.parse(localStorage.getItem(STORAGE_EXAMS) || JSON.stringify(DEFAULT_EXAMS))
+                });
+                if ('periodicSync' in reg) {
+                    try { await reg.periodicSync.register('bac2027-notifications', {minInterval: 15 * 60 * 1000}); } catch(e) {}
+                }
+            } catch(e) {}
+        }
+
+        checkScheduledNotifications();
+        setInterval(checkScheduledNotifications, 30 * 1000);
+        document.addEventListener('visibilitychange', () => {
+            if (!document.hidden) {
+                checkScheduledNotifications();
+                syncNotificationScheduleToServiceWorker();
+            }
+        });
+        syncNotificationScheduleToServiceWorker();
+
+        // Study Stopwatch & Weekly Analytics (Right: Stats, Left: SVG Chart)
+        let studySecondsSession = 0;
+        let studySecondsToday = 0;
+        let isTimerRunning = false;
+        let timerInterval = null;
+
+        const DAYS_OF_WEEK = [
+            { key: 'Sat', name: 'السبت' },
+            { key: 'Sun', name: 'الأحد' },
+            { key: 'Mon', name: 'الإثنين' },
+            { key: 'Tue', name: 'الثلاثاء' },
+            { key: 'Wed', name: 'الأربعاء' },
+            { key: 'Thu', name: 'الخميس' },
+            { key: 'Fri', name: 'الجمعة' }
+        ];
+
+        function getTodayDayKey() {
+            const jsDay = new Date().getDay();
+            const map = { 6: 'Sat', 0: 'Sun', 1: 'Mon', 2: 'Tue', 3: 'Wed', 4: 'Thu', 5: 'Fri' };
+            return map[jsDay] || 'Sun';
+        }
+
+        function initStudyTimer() {
+            const todayStr = new Date().toISOString().split('T')[0];
+            const lastDate = localStorage.getItem(STORAGE_STUDY_LAST_DATE);
+
+            if (lastDate !== todayStr) {
+                localStorage.setItem(STORAGE_STUDY_LAST_DATE, todayStr);
+                localStorage.setItem(STORAGE_STUDY_TODAY, '0');
+                studySecondsToday = 0;
+            } else {
+                studySecondsToday = parseInt(localStorage.getItem(STORAGE_STUDY_TODAY) || '0', 10);
+            }
+
+            updateStudyDisplays();
+            renderWeeklyStats();
+
+            document.getElementById('toggleTimerBtn').addEventListener('click', toggleTimer);
+            document.getElementById('resetTimerBtn').addEventListener('click', resetTimer);
+            document.getElementById('floatToggleBtn').addEventListener('click', toggleTimer);
+            document.getElementById('floatResetBtn').addEventListener('click', resetTimer);
+
+            document.getElementById('floatTimerBtn').addEventListener('click', () => {
+                document.getElementById('floatingTimerWidget').classList.remove('hidden');
+            });
+            document.getElementById('closeFloatWidgetBtn').addEventListener('click', () => {
+                document.getElementById('floatingTimerWidget').classList.add('hidden');
+            });
+        }
+
+        function toggleTimer() {
+            if (isTimerRunning) pauseTimer();
+            else startTimer();
+        }
+
+        function startTimer() {
+            isTimerRunning = true;
+            document.getElementById('timerPlayIcon').className = "fa-solid fa-pause";
+            document.getElementById('timerPlayText').textContent = "إيقاف مؤقت";
+
+            timerInterval = setInterval(() => {
+                studySecondsSession++;
+                studySecondsToday++;
+                updateStudyDisplays();
+
+                if (studySecondsSession % 5 === 0) {
+                    localStorage.setItem(STORAGE_STUDY_TODAY, studySecondsToday.toString());
+                    saveTodayToWeeklyStats();
+                }
+            }, 1000);
+        }
+
+        function pauseTimer() {
+            isTimerRunning = false;
+            clearInterval(timerInterval);
+            document.getElementById('timerPlayIcon').className = "fa-solid fa-play";
+            document.getElementById('timerPlayText').textContent = "استئناف الدراسة";
+            localStorage.setItem(STORAGE_STUDY_TODAY, studySecondsToday.toString());
+            saveTodayToWeeklyStats();
+        }
+
+        function resetTimer() {
+            pauseTimer();
+            studySecondsSession = 0;
+            studySecondsToday = 0;
+            localStorage.setItem(STORAGE_STUDY_TODAY, '0');
+            saveTodayToWeeklyStats();
+            updateStudyDisplays();
+        }
+
+        function formatTimeHMS(totalSecs) {
+            const h = Math.floor(totalSecs / 3600);
+            const m = Math.floor((totalSecs % 3600) / 60);
+            const s = totalSecs % 60;
+            return `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+        }
+
+        function updateStudyDisplays() {
+            const sessionStr = formatTimeHMS(studySecondsSession);
+            document.getElementById('studyTimerDisplay').textContent = sessionStr;
+            document.getElementById('floatTimerDisplay').textContent = sessionStr;
+
+            const h = Math.floor(studySecondsToday / 3600);
+            const m = Math.floor((studySecondsToday % 3600) / 60);
+            document.getElementById('todayTotalDisplay').textContent = `${h} ساعة و ${m} دقيقة`;
+        }
+
+        function getWeeklyDataMap() {
+            let data = JSON.parse(localStorage.getItem(STORAGE_WEEKLY_DATA) || '{}');
+            DAYS_OF_WEEK.forEach(d => {
+                if (typeof data[d.key] !== 'number') data[d.key] = 0;
+            });
+            return data;
+        }
+
+        function saveTodayToWeeklyStats() {
+            let data = getWeeklyDataMap();
+            const todayKey = getTodayDayKey();
+            data[todayKey] = studySecondsToday;
+            localStorage.setItem(STORAGE_WEEKLY_DATA, JSON.stringify(data));
+            renderWeeklyStats();
+        }
+
+        function renderWeeklyStats() {
+            const data = getWeeklyDataMap();
+            const grid = document.getElementById('weeklyStatsGrid');
+            const svgContainer = document.getElementById('weeklySvgChartContainer');
+            if (!grid || !svgContainer) return;
+
+            grid.innerHTML = '';
+            let totalWeeklySecs = 0;
+            const currentDayKey = getTodayDayKey();
+            const hoursList = [];
+
+            DAYS_OF_WEEK.forEach(d => {
+                let secs = (d.key === currentDayKey) ? studySecondsToday : (data[d.key] || 0);
+                totalWeeklySecs += secs;
+                const hoursVal = parseFloat((secs / 3600).toFixed(1));
+                hoursList.push({ name: d.name, hours: hoursVal, isToday: (d.key === currentDayKey) });
+
+                grid.innerHTML += `
+                    <div class="glass-card rounded-xl p-2.5 text-center border ${d.key === currentDayKey ? 'border-gold-400 bg-syrianBlue-800/90 shadow-lg shadow-gold-500/10' : 'border-gold-500/20'}">
+                        <span class="text-[11px] ${d.key === currentDayKey ? 'text-gold-300 font-bold' : 'text-gray-300'} block mb-0.5">${d.name}</span>
+                        <span class="text-base font-black font-cairo ${d.key === currentDayKey ? 'gold-gradient-text' : 'text-white'} block">${hoursVal} س</span>
+                    </div>
+                `;
+            });
+
+            document.getElementById('weeklyTotalHours').textContent = (totalWeeklySecs / 3600).toFixed(1);
+
+            // Render SVG Chart on the left
+            const maxHours = Math.max(...hoursList.map(item => item.hours), 5); // at least 5 hours scale
+            let svgHtml = `<svg class="w-full h-full overflow-visible" viewBox="0 0 350 140">`;
+            
+            // Grid lines
+            svgHtml += `<line x1="0" y1="20" x2="350" y2="20" stroke="rgba(212,175,55,0.15)" stroke-dasharray="4"/>`;
+            svgHtml += `<line x1="0" y1="70" x2="350" y2="70" stroke="rgba(212,175,55,0.15)" stroke-dasharray="4"/>`;
+            svgHtml += `<line x1="0" y1="120" x2="350" y2="120" stroke="rgba(212,175,55,0.15)" stroke-dasharray="4"/>`;
+
+            let points = [];
+            hoursList.forEach((item, idx) => {
+                const x = 30 + (idx * 48);
+                const y = 120 - Math.min(100, (item.hours / maxHours) * 100);
+                points.push(`${x},${y}`);
+            });
+
+            // Polyline connecting graph
+            if (points.length > 1) {
+                svgHtml += `<polyline fill="none" stroke="url(#goldGradient)" stroke-width="3" points="${points.join(' ')}"/>`;
+            }
+
+            // Gradients and points
+            svgHtml += `<defs><linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#14b8a6"/><stop offset="100%" stop-color="#d4af37"/></linearGradient></defs>`;
+
+            hoursList.forEach((item, idx) => {
+                const x = 30 + (idx * 48);
+                const y = 120 - Math.min(100, (item.hours / maxHours) * 100);
+                svgHtml += `<circle cx="${x}" cy="${y}" r="${item.isToday ? 6 : 4}" fill="${item.isToday ? '#fde047' : '#14b8a6'}" stroke="#0b132b" stroke-width="2"/>`;
+                svgHtml += `<text x="${x}" y="135" fill="${item.isToday ? '#fde047' : '#94a3b8'}" font-size="9" text-anchor="middle" font-family="Tajawal">${item.name}</text>`;
+            });
+
+            svgHtml += `</svg>`;
+            svgContainer.innerHTML = svgHtml;
+        }
+
+        // AI Mentor Chatbot
+        const MEDICAL_AI_RESPONSES = [
+            "أهلاً بك يا بطل! لتجاوز هذه المسألة الصعبة، ابدأ دائماً بتحديد المعطيات والمطلوب بدقة، ثم تذكر القوانين الأساسية.",
+            "نصيحة ذهبية لعلم الأحياء: ارسم المخططات بيدك ولا تكتفِ بالقراءة البصرية، فالرسم يثبت المعلومات بنسبة 90% في الذاكرة طويلة المدى.",
+            "فيزياء البكالوريا تعتمد على الفهم العميق للوحدات والاشتقاق. لا تقلق، بالتدريب المكثف ستصبح أسهل بكثير!",
+            "عندما تشعر بالإرهاق، خذ استراحة لمدة 10 دقائق تنفس فيها بعمق واشرب الماء، ثم عد بنشاط أكبر.",
+            "تذكر أن حلم المئزر الأبيض يستحق كل التعب. أنا هنا لمساعدتك في أي سؤال أو استسفار طوال طريقك لعام 2027!"
+        ];
+
+        function initAiChat() {
+            const chatWindow = document.getElementById('aiChatWindow');
+            const chatForm = document.getElementById('aiChatForm');
+            const chatInput = document.getElementById('aiChatInput');
+            const clearBtn = document.getElementById('clearAiChatBtn');
+
+            let history = JSON.parse(localStorage.getItem(STORAGE_AI_CHAT) || '[]');
+            if (history.length > 0) {
+                chatWindow.innerHTML = '';
+                history.forEach(msg => appendChatMessage(msg.sender, msg.text, false));
+            }
+
+            chatForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const q = chatInput.value.trim();
+                if (!q) return;
+
+                appendChatMessage('user', q, true);
+                chatInput.value = '';
+
+                setTimeout(() => {
+                    let reply = MEDICAL_AI_RESPONSES[Math.floor(Math.random() * MEDICAL_AI_RESPONSES.length)];
+                    if (q.includes('فيزياء') || q.includes('مسألة')) {
+                        reply = "في حل المسائل الفيزيائية: 1) اكتب المعطيات مع تحويل الوحدات للدولية SI. 2) اختر القانون المناسب. 3) عوض بالأرقام واكتب التابع النهائي مع وحدته الصحيحة.";
+                    } else if (q.includes('علوم') || q.includes('أحياء')) {
+                        reply = "في علوم البكالوريا، التركيز على الكلمات المفتاحية في سلم الإصلاح هو سر العلامة التامة (240/240). احرص على دقة المصطلحات العلمية.";
+                    } else if (q.includes('تنظيم') || q.includes('وقت')) {
+                        reply = "لتنظيم الوقت: خصص ساعات الصباح الباكر للمواد الحفظية (علوم/حفظ) وساعات الظهيرة والمساء للمواد التحليلية (رياضيات/فيزياء/كيمياء).";
+                    }
+                    appendChatMessage('ai', reply, true);
+                }, 800);
+            });
+
+            clearBtn.addEventListener('click', () => {
+                localStorage.removeItem(STORAGE_AI_CHAT);
+                chatWindow.innerHTML = `
+                    <div class="flex items-start gap-2.5">
+                        <div class="w-8 h-8 rounded-xl bg-medical-600 text-white flex items-center justify-center text-xs shrink-0 font-bold">AI</div>
+                        <div class="glass-card p-3 rounded-2xl rounded-tr-none text-xs text-gray-100 max-w-xl leading-relaxed border border-medical-500/30">
+                            تم مسح محادثة المستشار. كيف يمكنني مساعدتك الآن في دراسة البكالوريا؟
+                        </div>
+                    </div>
+                `;
+            });
+
+            document.querySelectorAll('.quick-prompt-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    chatInput.value = btn.getAttribute('data-prompt');
+                });
+            });
+        }
+
+        function appendChatMessage(sender, text, save) {
+            const chatWindow = document.getElementById('aiChatWindow');
+            const isUser = sender === 'user';
+            
+            const html = isUser ? `
+                <div class="flex items-start gap-2.5 justify-end">
+                    <div class="bg-medical-600/80 p-3 rounded-2xl rounded-tl-none text-xs text-white max-w-xl leading-relaxed border border-medical-400/30">
+                        ${text}
+                    </div>
+                    <div class="w-8 h-8 rounded-xl bg-syrianBlue-800 text-gold-300 flex items-center justify-center text-xs shrink-0 font-bold border border-gold-500/30">أنا</div>
+                </div>
+            ` : `
+                <div class="flex items-start gap-2.5">
+                    <div class="w-8 h-8 rounded-xl bg-medical-600 text-white flex items-center justify-center text-xs shrink-0 font-bold">AI</div>
+                    <div class="glass-card p-3 rounded-2xl rounded-tr-none text-xs text-gray-100 max-w-xl leading-relaxed border border-medical-500/30">
+                        ${text}
+                    </div>
+                </div>
+            `;
+
+            chatWindow.innerHTML += html;
+            chatWindow.scrollTop = chatWindow.scrollHeight;
+
+            if (save) {
+                let history = JSON.parse(localStorage.getItem(STORAGE_AI_CHAT) || '[]');
+                history.push({ sender, text });
+                if (history.length > 30) history.shift();
+                localStorage.setItem(STORAGE_AI_CHAT, JSON.stringify(history));
+            }
+        }
+
+        // Timetable & Exams
+        const DEFAULT_TIMETABLE = {
+            "الأحد": ["علم الأحياء (وراثة)", "الفيزياء (أمواج)", "الرياضيات (تفاضل)", "الكيمياء (عضوية)", "اللغة العربية"],
+            "الإثنين": ["الرياضيات (تكامل)", "علم الأحياء (مناعة)", "الفيزياء (مغناطيسية)", "التربية الإسلامية", "اللغة الإنجليزية"],
+            "الثلاثاء": ["الكيمياء (توازن)", "علم الأحياء (عصبية)", "الرياضيات (عقدية)", "الفيزياء (نووية)", "اللغة الفرنسية"],
+            "الأربعاء": ["الفيزياء (كهرباء)", "علم الأحياء (مورثات)", "الرياضيات (هندسة)", "الكيمياء (عضوية)", "اللغة العربية"],
+            "الخميس": ["مراجعة شاملة علوم", "امتحان تجريبي رياضيات", "فيزياء أتمتة", "كيمياء استذكار", "تخطيط الأسبوع القادم"]
+        };
+
+        function initTimetableTable() {
+            let timetableData = JSON.parse(localStorage.getItem(STORAGE_TIMETABLE) || JSON.stringify(DEFAULT_TIMETABLE));
+            const tbody = document.getElementById('timetableBody');
+            if (!tbody) return;
+
+            tbody.innerHTML = '';
+            Object.keys(timetableData).forEach(day => {
+                let rowHtml = `<tr class="border-b border-gold-500/10 hover:bg-syrianBlue-800/40 transition">
+                    <th class="p-2.5 font-bold text-gold-300 border-r border-gold-500/10 bg-syrianBlue-900/40">${day}</th>`;
+                
+                timetableData[day].forEach((subject, idx) => {
+                    rowHtml += `<td class="p-2.5 border-r border-gold-500/10 cursor-pointer text-gray-200 hover:text-gold-200" title="اضغط للتعديل" data-day="${day}" data-index="${idx}">${subject}</td>`;
+                });
+                rowHtml += `</tr>`;
+                tbody.innerHTML += rowHtml;
+            });
+
+            tbody.querySelectorAll('td').forEach(td => {
+                td.addEventListener('click', function() {
+                    const day = this.getAttribute('data-day');
+                    const idx = parseInt(this.getAttribute('data-index'), 10);
+                    const currentVal = this.textContent;
+                    const newVal = prompt(`تعديل حصة (${day} - الحصة ${idx+1}):`, currentVal);
+                    if (newVal !== null && newVal.trim() !== '') {
+                        timetableData[day][idx] = newVal.trim();
+                        localStorage.setItem(STORAGE_TIMETABLE, JSON.stringify(timetableData));
+                        initTimetableTable();
+                    }
+                });
+            });
+
+            document.getElementById('resetTimetableBtn')?.addEventListener('click', () => {
+                if (confirm('هل تريد إعادة تعيين الجدول إلى الافتراضي؟')) {
+                    localStorage.setItem(STORAGE_TIMETABLE, JSON.stringify(DEFAULT_TIMETABLE));
+                    initTimetableTable();
+                }
+            });
+        }
+
+        const DEFAULT_EXAMS = [
+            { id: 1, subject: "علم الأحياء - الوحدة الأولى (عصبية)", date: "2026-10-15", notes: "مذاكرة شاملة للأتمتة والرسومات" },
+            { id: 2, subject: "الفيزياء - بحث الأمواج والاهتزازات", date: "2026-10-28", notes: "حل كافة المسائل الكلاسيكية" },
+            { id: 3, subject: "الرياضيات - التابع الأسسي واللوغاريتمي", date: "2026-11-10", notes: "التركيز على الجلسات الامتحانية" }
+        ];
+
+        function initExamsModule() {
+            let exams = JSON.parse(localStorage.getItem(STORAGE_EXAMS) || JSON.stringify(DEFAULT_EXAMS));
+            renderExams(exams);
+
+            const modal = document.getElementById('examModal');
+            document.getElementById('addExamBtn').addEventListener('click', () => modal.classList.remove('hidden'));
+            document.getElementById('closeExamModalBtn').addEventListener('click', () => modal.classList.add('hidden'));
+            document.getElementById('cancelExamBtn').addEventListener('click', () => modal.classList.add('hidden'));
+
+            document.getElementById('examForm').addEventListener('submit', (e) => {
+                e.preventDefault();
+                const subject = document.getElementById('examSubjectInput').value.trim();
+                const date = document.getElementById('examDateInput').value;
+                const notes = document.getElementById('examNotesInput').value.trim();
+
+                if (subject && date) {
+                    exams.push({ id: Date.now(), subject, date, notes });
+                    localStorage.setItem(STORAGE_EXAMS, JSON.stringify(exams));
+                    renderExams(exams);
+                    syncNotificationScheduleToServiceWorker();
+                    modal.classList.add('hidden');
+                    document.getElementById('examForm').reset();
+                }
+            });
+        }
+
+        function renderExams(exams) {
+            const listContainer = document.getElementById('examsList');
+            if (!listContainer) return;
+
+            if (exams.length === 0) {
+                listContainer.innerHTML = `<p class="text-xs text-gray-400 text-center py-4">لا توجد امتحانات مسجلة حالياً.</p>`;
+                return;
+            }
+
+            listContainer.innerHTML = '';
+            exams.sort((a,b) => new Date(a.date) - new Date(b.date)).forEach(exam => {
+                listContainer.innerHTML += `
+                    <div class="bg-syrianBlue-900/80 p-3 rounded-xl border border-medical-500/20 flex items-center justify-between gap-3">
+                        <div>
+                            <span class="text-xs font-bold text-white block">${exam.subject}</span>
+                            <span class="text-[11px] text-medical-300 block mt-0.5"><i class="fa-regular fa-calendar ml-1"></i> ${exam.date} • ${exam.notes || 'بدون ملاحظات'}</span>
+                        </div>
+                        <button onclick="deleteExam(${exam.id})" class="text-gray-400 hover:text-rose-400 p-1.5 cursor-pointer text-xs" title="حذف">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </div>
+                `;
+            });
+        }
+
+        window.deleteExam = function(id) {
+            let exams = JSON.parse(localStorage.getItem(STORAGE_EXAMS) || JSON.stringify(DEFAULT_EXAMS));
+            exams = exams.filter(e => e.id !== id);
+            localStorage.setItem(STORAGE_EXAMS, JSON.stringify(exams));
+            renderExams(exams);
+            syncNotificationScheduleToServiceWorker();
+        };
+
+        // Quran Audio Player
+        const RECITER_URLS = {
+            afs: "https://server8.mp3quran.net/afs/",
+            maher: "https://server11.mp3quran.net/maher/",
+            basit: "https://server7.mp3quran.net/basit/",
+            yasser: "https://server11.mp3quran.net/yasser/",
+            sds: "https://server11.mp3quran.net/sds/",
+            minsh: "https://server10.mp3quran.net/minsh/"
+        };
+
+        const SURAH_NAMES = {
+            "001": "سورة الفاتحة",
+            "018": "سورة الكهف",
+            "036": "سورة يس",
+            "055": "سورة الرحمن",
+            "056": "سورة الواقعة",
+            "067": "سورة الملك",
+            "094": "سورة الشرح"
+        };
+
+        let isQuranPlaying = false;
+
+        function initQuranPlayer() {
+            const audioPlayer = document.getElementById('quranAudioPlayer');
+            const playBtn = document.getElementById('playQuranBtn');
+            const playIcon = document.getElementById('quranPlayIcon');
+            const playText = document.getElementById('quranPlayText');
+            const statusLabel = document.getElementById('quranStatus');
+            const surahSelect = document.getElementById('quranSelect');
+            const reciterSelect = document.getElementById('reciterSelect');
+            const currentNameLabel = document.getElementById('currentSurahName');
+            const nextQuranBtn = document.getElementById('nextQuranBtn');
+
+            function getSelectedAudioURL() {
+                const reciterKey = reciterSelect.value;
+                const surahNum = surahSelect.value;
+                return {
+                    url: `${RECITER_URLS[reciterKey]}${surahNum}.mp3`,
+                    name: `${SURAH_NAMES[surahNum]} - ${reciterSelect.options[reciterSelect.selectedIndex].text}`
+                };
+            }
+
+            playBtn.addEventListener('click', () => {
+                if (isQuranPlaying) {
+                    audioPlayer.pause();
+                    isQuranPlaying = false;
+                    playIcon.className = "fa-solid fa-play";
+                    playText.textContent = "تشغيل القرآن";
+                    statusLabel.textContent = "متوقف";
+                } else {
+                    const info = getSelectedAudioURL();
+                    audioPlayer.src = info.url;
+                    currentNameLabel.textContent = info.name;
+                    audioPlayer.play().then(() => {
+                        isQuranPlaying = true;
+                        playIcon.className = "fa-solid fa-pause";
+                        playText.textContent = "إيقاف مؤقت";
+                        statusLabel.textContent = "يعمل الآن 🎧";
+                    }).catch(err => {
+                        alert('تعذر تشغيل ملف الصوت حالياً. تأكد من الاتصال بالإنترنت.');
+                    });
+                }
+            });
+
+            audioPlayer.addEventListener('ended', () => {
+                isQuranPlaying = false;
+                playIcon.className = "fa-solid fa-play";
+                playText.textContent = "تشغيل القرآن";
+                statusLabel.textContent = "انتهت التلاوة";
+            });
+
+            nextQuranBtn.addEventListener('click', () => {
+                const keys = Object.keys(SURAH_NAMES);
+                const randomKey = keys[Math.floor(Math.random() * keys.length)];
+                surahSelect.value = randomKey;
+                if (isQuranPlaying) {
+                    const info = getSelectedAudioURL();
+                    audioPlayer.src = info.url;
+                    currentNameLabel.textContent = info.name;
+                    audioPlayer.play();
+                } else {
+                    const info = getSelectedAudioURL();
+                    currentNameLabel.textContent = info.name;
+                }
+            });
+        }
+
+        // Ambient Audio Synthesizer
+        let audioCtx = null;
+        let ambientState = {
+            rain: { active: false, node: null, gain: null, vol: 0.4 },
+            waves: { active: false, node: null, gain: null, vol: 0.4 },
+            wind: { active: false, node: null, gain: null, vol: 0.4 },
+            birds: { active: false, node: null, gain: null, vol: 0.4 }
+        };
+
+        function initAmbientAudioEngine() {
+            const types = ['rain', 'waves', 'wind', 'birds'];
+
+            types.forEach(type => {
+                const toggleBtn = document.getElementById(`amb${type.charAt(0).toUpperCase() + type.slice(1)}Toggle`);
+                const volRange = document.getElementById(`amb${type.charAt(0).toUpperCase() + type.slice(1)}Vol`);
+
+                toggleBtn.addEventListener('click', () => {
+                    if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                    if (audioCtx.state === 'suspended') audioCtx.resume();
+
+                    ambientState[type].active = !ambientState[type].active;
+                    if (ambientState[type].active) {
+                        toggleBtn.className = "w-6 h-6 rounded-lg bg-medical-600 text-white flex items-center justify-center cursor-pointer text-xs shadow";
+                        startAmbientSound(type);
+                    } else {
+                        toggleBtn.className = "w-6 h-6 rounded-lg bg-syrianBlue-700 text-gray-400 hover:text-white flex items-center justify-center cursor-pointer text-xs";
+                        stopAmbientSound(type);
+                    }
+                    updateActiveAmbientCount();
+                });
+
+                volRange.addEventListener('input', (e) => {
+                    const val = parseFloat(e.target.value) / 100;
+                    ambientState[type].vol = val;
+                    if (ambientState[type].gain && audioCtx) {
+                        ambientState[type].gain.gain.setValueAtTime(val * 0.3, audioCtx.currentTime);
+                    }
+                });
+            });
+        }
+
+        function startAmbientSound(type) {
+            if (!audioCtx) return;
+            stopAmbientSound(type);
+
+            const bufferSize = audioCtx.sampleRate * 2;
+            const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+            const data = buffer.getChannelData(0);
+
+            for (let i = 0; i < bufferSize; i++) data[i] = Math.random() * 2 - 1;
+
+            const noise = audioCtx.createBufferSource();
+            noise.buffer = buffer;
+            noise.loop = true;
+
+            const filter = audioCtx.createBiquadFilter();
+            if (type === 'rain') { filter.type = 'lowpass'; filter.frequency.value = 800; }
+            else if (type === 'waves') { filter.type = 'bandpass'; filter.frequency.value = 350; filter.Q.value = 3; }
+            else if (type === 'wind') { filter.type = 'bandpass'; filter.frequency.value = 200; filter.Q.value = 1; }
+            else if (type === 'birds') { filter.type = 'highpass'; filter.frequency.value = 2500; }
+
+            const gainNode = audioCtx.createGain();
+            gainNode.gain.setValueAtTime(ambientState[type].vol * 0.3, audioCtx.currentTime);
+
+            noise.connect(filter);
+            filter.connect(gainNode);
+            gainNode.connect(audioCtx.destination);
+
+            noise.start(0);
+            ambientState[type].node = noise;
+            ambientState[type].gain = gainNode;
+        }
+
+        function stopAmbientSound(type) {
+            if (ambientState[type].node) {
+                try {
+                    ambientState[type].node.stop();
+                    ambientState[type].node.disconnect();
+                } catch (e) {}
+                ambientState[type].node = null;
+                ambientState[type].gain = null;
+            }
+        }
+
+        function updateActiveAmbientCount() {
+            let count = 0;
+            Object.keys(ambientState).forEach(k => { if (ambientState[k].active) count++; });
+            document.getElementById('activeAmbientCount').textContent = `${count} شغال`;
+        }
+
+        // Fullscreen Toggle
+        document.getElementById('fullscreenBtn')?.addEventListener('click', () => {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen().catch(() => {});
+            } else {
+                if (document.exitFullscreen) document.exitFullscreen();
+            }
+        });
+
+        // Window Load Initialization
+        window.onload = function() {
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+
+            updateMotivationalBanner();
+            setInterval(updateMotivationalBanner, 60000);
+
+            initStudyTimer();
+            initAiChat();
+            initQuranPlayer();
+            initAmbientAudioEngine();
+            initTimetableTable();
+            initExamsModule();
+            applyTheme(localStorage.getItem(THEME_KEY) || 'dark');
+            syncSettingsUI();
+            if (localStorage.getItem(FULLSCREEN_KEY) === '1' && document.fullscreenEnabled && !window.matchMedia('(display-mode: standalone)').matches) {
+                // Browsers may require a user gesture; the dedicated fullscreen button remains available.
+                document.addEventListener('click', function firstGesture() {
+                    if (localStorage.getItem(FULLSCREEN_KEY) === '1' && !document.fullscreenElement) {
+                        document.documentElement.requestFullscreen?.().catch(() => {});
+                    }
+                    document.removeEventListener('click', firstGesture);
+                }, {once:true});
+            }
+        };
+    </script>
+
+</body></html>
